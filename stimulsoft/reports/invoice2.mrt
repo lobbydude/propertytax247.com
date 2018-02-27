@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Flex" application="StiReport">
+  <Dictionary isKey="true" Ref="1" type="Dictionary">
+    <Databases isList="true" count="1">
+      <Connection1 isKey="true" Ref="2" type="Stimulsoft.Report.Dictionary.StiMySqlDatabase">
+        <Alias>Connection1</Alias>
+        <ConnectionStringEncrypted>w2z3a0ZX06TiW7XcY3ThP4tS0cvFSHvN4Vz9xGQ95D/CVtvryUpbvOJHyb3pBPYb30D1681Xy6RG
+TdU=</ConnectionStringEncrypted>
+        <Name>Connection1</Name>
+      </Connection1>
+    </Databases>
+    <DataSources isList="true" count="1">
+      <DataSource1 isKey="true" Ref="3" type="Stimulsoft.Report.Dictionary.StiMySqlSource">
+        <Alias>DataSource1</Alias>
+        <Columns isList="true" count="12">
+          <value>txn_id,System.Int32</value>
+          <value>Product_Type,System.String</value>
+          <value>Date,System.DateTime</value>
+          <value>Street,System.String</value>
+          <value>Total_Amt,System.String</value>
+          <value>Order_Number,System.String</value>
+          <value>Username,System.String</value>
+          <value>Product_Price,System.String</value>
+          <value>Joined_Date,System.DateTime</value>
+          <value>lpad_x0028_tbl_transaction_x002E_txn_id_x002C_4_x002C__x0027_0_x0027__x0029_,System.String</value>
+          <value>sum_x0028_tbl_order_x002E_Product_Price_x002B_tbl_order_x002E_Priority_x0029_,System.String</value>
+          <value>Priority,System.String</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1"/>
+        <Name>DataSource1</Name>
+        <NameInSource>Connection1</NameInSource>
+        <Parameters isList="true" count="0"/>
+        <SqlCommand>Select 
+lpad(tbl_transaction.txn_id,4,'0'),
+tbl_order.Product_Type,
+tbl_transaction.Date,
+tbl_order.Street,
+tbl_transaction.Total_Amt,
+tbl_order.Order_Number,
+tbl_order.Product_Price,
+tbl_order.Priority,
+tbl_user.Username,
+tbl_user.Joined_Date 
+from 
+tbl_order inner join tbl_transaction on tbl_transaction.txn_id=tbl_order.Txn_Id 
+inner join tbl_plan on tbl_plan.Plan_Id=tbl_order.Plan_Id 
+inner join tbl_user on tbl_user.User_Id=tbl_order.User_Id 
+where tbl_transaction.txn_id={param1}</SqlCommand>
+      </DataSource1>
+    </DataSources>
+    <Relations isList="true" count="0"/>
+    <Report isRef="0"/>
+    <Variables isList="true" count="0"/>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0"/>
+  <MetaTags isList="true" count="0"/>
+  <Pages isList="true" count="1">
+    <Page1 isKey="true" Ref="4" type="Page">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="25">
+        <Image1 isKey="true" Ref="5" type="Image">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.6,-0.2,5.6,3</ClientRectangle>
+          <Conditions isList="true" count="0"/>
+          <DataColumn isNull="true"/>
+          <Image>iVBORw0KGgoAAAANSUhEUgAAAMgAAABrCAYAAAAy0M3eAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAAD2EAAA9hAag/p2kAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAu
+NvyMY98AAFxpSURBVHhe7V0HfFRV9k6v9NCLqBFB7NhQxD4KrqgoFnRFRdeWtWFBsIAiKiq2uOLa
+3VWxrLo2MKKuShdWpYYk1NSZTPpkSqad/3fue/fNnZk3M0nA3f0r8fdMmPLq+e5p3zkniYiS9v7s
+vQN770CMO7AXIHtFY+8diHMH9gJkr3jsvQN7AbJXBv5Ld8BfWlkWrKonn72JqLKOAtuqxe9gZSUF
+d1ipraaVAuV28m4qI19j3f+evb9Xg/yXJOc3dthA0Fros62m2tffIM+995Lr+rup+rq7yXndjeS6
+YTq5sYnf1xeE/o3PuO95hJzX3kn1519Mwbn37QXIb0wu9l4O7gBV7iT3689Q4+2XkP3EUeQYNIxc
+/YdR04iDyNVvIHn69I+z9aPW7AHUlJVFLWeN3guQvRL127oDvnW/lHmmP0DNxxxDrmEjyJnVnbyp
+6eRNTqPG5FRqxubA32FbUirV5GSQH79b+T383gWctd5y0V6A/LbE4/d9Nf512woan3yRbKPGkqdb
+b2rLyQEQulJbchdyJvciX1J3AKAr/u5KbmyOFG3zJudSXcog8if3pQZ8tjm7K23rNpDoL/P2AuT3
+LVK/nasPvvdeNi14jWoH9yRbrxzyZfSnyuQcakjrQi2pGeSDZvAl9wY48gAIvJacCfB0AWhS8Voa
+1SWlAEhZVInf3qxcKu42mGjzir0A+e2IyO/7SoLfrCD3WReQtWsONWd1pSZoC3/OQPJnwsRioYfG
+aMmExsBvBoUGmDQAJY3ahGnVlTzY6mCC+QGcqoMPI3KX7QXI71usfhtXH6jYUeS+/Q7yZPYUwt8C
+IWcTyqeDwZuVTXaApCY5maqwVaYkU02XTGgY/M1bUjKV4bUd8DtKe2ZSGX5vPPp4avNV7wXIb0NE
+fr9XEXQ7LK5Pl1DtqGPhZGcLULAD7kuC75GdS42ZOdAmKcKvqIdmKM3Ioi2IUJXk4Te2svQU8buk
+VybVZGeQrXcWbWANc9PVFJw/P/t/7s7uzYP8zz2S/+kTojU/WWpvv5OsWekASKYwlXjzAyB1EHRr
+bjZZU9NoI7TKvwYMo5o/TaTGWy8O326ZRHXTbxWb+4YCqr/1EqJPF1JwxXt7AfI//fT3nlzCOxB8
+stBSY/kD1UNLtObkUksOR6ty4UekCn+iAuZScVIOlZ5zDlH1zxQM7so326mjrcIvX6dgK5GrfHKJ
+z228lvBE/lMf2KtB/lN3+rdxHFq0lBr77QfTCpGpjAz4H7lwyrtRC8ytQHYebc3IpK0AUGDzz841
+DutkB/yKVm+ltrVVkD0Augn+M7sbNodrL0B+G2Ly+70K72vvUmtGN2iNXnDMuyBUC+c8pTu509nU
+6kLbu/cl+uw9rLuUUuusefv//Z36LWmQujrH/94K9P9eQkIXEGiodrpPOw/gSBIJv+aUHkj4cSKw
+G7lgVomIluVc8n3xjqWzl11B/rWR390VDOYz4srLg2E+Sp2/boYjuK1fRdBn7+zx5Pc8Nc63g8Hw
+/Yv3/lsA4ZOpra0VKwx+x73ARYsW5b/55pt08sknk8VioUcfe5RWrfy3c3dvSuT32wswfC7qIdbV
+tZjf4HacJPYX9/qXLVuW//LLL9NJJ51E48ePp7mPPEJbt27d49ef6FT9v/zsrB05Gg65BhBHShdo
+DfZBulBTZjZtwuvul58nn7sqCiAQ4rfLFQHEv2MuZmb31/BXdm2ntjtnUPWZl1D9pTdS4JMvKVBd
+jUhx9E9F0DujMugZbgDMDAD4WmXQV7PF51qgnp+xt1gAsVqttGTJEvr+++/p66+/Ftt3331H33zz
+jXiNN7xfGHla+IxFfmb58uW0Zs0a+te//kWLFy+mzz77DP/+kTZv3tzuFebjjz8u22effdhmpWTE
+0Hnjv/m1hQvfhxNIYU4gjmf58ccfxfnyefBvPtdvv/3WuAZ5HXxe//ruX7R61Vr6evGnBXwtn3zy
+iYXf5+/w+5HXjH8XJRIkfv89ZJrleajH5/Pg8+L9lpSUkM1mM3Vi5TFWrlxZNnjwYErPzBTXnpqa
+SlnJKXTg8OF03733Rt3/bdu2WdauXWucv7wPfFw+ZuRz5Nf52eC3uP54P/ZXX3K2DDjS0CCtOkhc
+MLcaoT1+7AHzavEX4v7Q9lLyfvE5+b5cjO1L8n61lAIrVlL1++9p729ZT74lX5Efz8e3DEL+3ffk
+/+Zr8r79dsz7a3/sCec2JCSdIDdWYhd1qf2pJWV/qpt6KwXtNabnHywuLvO9vZD8ny4i5/ff4HhL
+xHHk5vuqiKjFSkFnpfi+zeEOX/xiAYSFQxVKKZyqkF588cXEq5t6U88880xL/wGDowQ6NS2DcsDV
+4X3yNnHiRIIART1guS9ezSGsk/fff/+Y58H7Wbr0hzCH77TTTrPk5eUZYIo8b/N/p1BaZra4Qc8+
+V0hJiOvHunZ+vXv37nTjjTcSFpGY5w/BN67V7Ji8n8MOO4zq61tjJseKiooKDj744JjncgwIgjff
+fHPY/X/mmWcsI0aM6OD1i0UnLkDI5ym03nIfubv0F5QRwbFKytPCvACKENhzxhM1WzUAPLyAyjL6
+kS27CzWm9EFOpA++N4BqL7mSraVRwdFnkSdpCDVk5ZEjZwC1JvVFFGwgbep2+Ccws5ZKOYDjbsdO
+84KLPyR7+hAK5PQkB8LIWlKyB8y7LlSB1+mVNylYXh5mggW97gL/q69QXdah1Jy6L3lTBpCHN1Bg
+fPjtxuZP7kc/9j+anLOfJGpqjH4WsQDywoIFpg8mFdee26WLeO+yyy6jDRs2hD0gKaD8fiouJAOJ
+oxT8nc4rf3JIC7DQHHro4TRlyhTTFbQcFztv3mPiOOkZ2VGAk6/x+z6fz1CxHQWIsn8hIAv06842
+OV9jccB15GAV//Of/0y7doXCmKqJtmXLloQLzJgxY+jxxx83vf4VK1Zk33///WIfOV27it/Z2dmU
+iSy0ek8uv/zysIf62GOPWQ488MBOAySWeUOVFYUNl10Mmkg3CHa2oJK0SoAgklXL1vrzj9JWojG8
+Be95FKZYD5hh6RBmOPXJ3YVjX4O6DwGQY0eDxZstwNUiqCfZVJ+SSxXJvcM0CPsXlDQwz3vMeeJ4
+tVndaBuOFcjuTU25fcmLhZeTlI05g4gqKqIE3PPUk2V1OK4nuYf4nC+Zz4d/M8hwHfCdArmDaGvS
+AHIBJFEaNBZAZs6cmeABJ9M5E86DmbPQFCAsTBlSyEArSE7HhgtLSUkVm9QkM2bMMF1B8aAoA2FE
+bSVPAdjSo0GSrr12/vnnGwA57rjjLD169Oi0gEiA5HTrllDA09LSqLi42PT82TxNpIFxrnTvvfea
+AqQCD7urDgzeD9+LSE2UBuHg92A6GdffGQ3CZhu0blwNEli5vLB27KkQqGzhe2jao4cQcKaVbMd5
+BN97zrgXdP/DEPws8mX3xHfyQH3vhu/0our0AzUNc+IZ0Ci55AKZ0YHwcBveYw3TktxfvC98VD0K
+Ri+9CjB1F36PP7UPNacNAlUlD1T6HlQN2jxzu1pwnMbzp1LQ6wkDmP2pZ8saQKJ0ZGgM4wZ8ryGl
+t9hXI36L68D1NAH4tgNGkfexl6HByNBgMZ30WABRBZydxmeffTahicUCngzkRgpMCoQ+JzuTTZUo
+J+vtt9+O+rxYOdOztNVUWeHZRoe5Jh4wnFhL7969Ow2Ql156Ka5gszDxJn2ha665xhQgn376aUIT
+66CDDoqpQaffcbfx/ZzcXOGDqNcvAcyvDRs2zLh/ndMgIRMzagXVX2j7/J1C18GHCmGUAHELE4c1
+QApZe2VQcPX74l4EPa4i9223kxsAqQEAqlLzyIbVvg5JRZcBEAs1Qzh9eF/b+mCD+ZbdM8oHoTMm
+wRTCZ/D5ZphUnixwwFL6kz+jFwWzAJZeWdAk3agmaSgFG2vCvt/22FNlbIq5kjKggRBQgEnVio2/
+z1srzLomJDwduTg3vF9x2Z+QpfGFnmlHNQg/kCxwa/i3GUBiCSibV2ZmC+/njjvuiALIqaeeapgV
+kcBSTQwWVNYYt912mwBIR00sxacKM7Hi+S7y+GxC8t+qiScFrD0+3JAhQwjXGaVB8EyK8nr1MIAa
+S4PIc+zfvz998MEH4vw7ChDlXsbUIEFqyg9s/o6cBx2iM3F7Chq75gN0FeaVFWYdWVcZguWfMxd+
+CYRS+AosmJnYUlmbCAH2nT4Ofgn2AxOsXkTDuuB3HpUkhwOkunJ7WQsy9U0ZueJzjTndqC0V2oRZ
+wZnsD3WHo55GreldcLx+FHjjbbKSzwgCeR56WgCkOZ1rVXAcaA7exDH1v5tBz7eBcu+HJms47lSq
+e08JU8cCyNlnnx13JeWHw2HXO++8M6aJJR9gClZcuQJmRdj2/ICg3sMA4vV6+SYaqzTb3l3g98hV
+m7UI/y1NDDZ1Bg/sFwUQoWnw3UiAyfMKmXAhJ1UzsTQ7P5ZzLbWYtlhk00t/eS4K4LNnzzbMw1hg
+23e/fFOAIKokrp/NSta+kQCJXGwyoV0OP/xwcf0IB1vYsY91TGkBqO+n4F7Cu40DEFs+/eM1CnTp
+Cw4W09VzRI2HG8LZBACwT+C9+lIqV8iG7IOwBuGMO4eC2Rxjc8aZpAGATrTg/e7C3GHfoBX7Ys3k
+Tx4YrgHOubzMCfOHtQyD0g1t5EvtJaj1bgCsCvv3A0Au8MICeM166RQKUl0IILNnl7Ul9SR7JjL+
+XMiVBbMKmxegrYNv60ntC+D0hDbrATMNxVxd9qG6XseFoqyxAHLiiScmtKHNTIRIDcL3omfPnpSO
+37mw6/lh8muqAHDIFk6t8YB++eWXMIBEOekR2oj39dRTTyGRVJ7NUTQ2uVjIJYBUH4Y/m5aeKYIH
+ZgCJZWJFai0WUhF4iPCBpAZJ5MOxP5bXtRtBi0RpkAsuuEBcf9Qx9XPP6pIrAJCpRwXZcZ//zNPi
++juqQSI1qDx/9XfQ/U0+LZhDbbldBUmRAcJCz5l01iDVmalEBdfCBwmxcYMzHoXfANMHOZIWmDIO
+OODsA7ToAGCAOJJ6C8avBhAGT+h9Pr6TggX14yYJrpdHf78Z+6pP7Q3OVzaqEXsIgPkBAE5asolW
+PfZMCq750hBw6xzNxGLwcWChAY55K44nwJrOJhuc9uw+ADofH/4IzpcWf5XYxGoPQIYOHUrjxo1r
+lwbJhcMpHHc4m0IwdQHj1at37zz4Mo8bAJn/9NNFGbyC6k5orJVcW2GTKQUqkgWSIz9mJlZKCmxs
+aJlIoKn7xfMQx3/1pZdDpk0GVlacN2uhFN2ckhpQApx/Q8ijNAic77g+iCKYUQDB8UwBIq4VAY5s
+HRhqyP2WW28jzr08eP/9CPOGQsOR2iaVcyl6PikDwOJ7IrSxHuY2A4i7dFE+zblLRKTqIVBcUuvl
+1RwC6se/K/AsPTPvoHIcX36fNQiv6uw31Kex76GZMA5FgzBA2ARj25/BxqDz60467ye4rayg7qhT
+BUAaIeAiMQkw+LPgK8Dxdmf1FwDlzSWAhnzMQSdR3dy7DYC0PfpkmZcBgoAAax0HgOTNRf4E4Wdm
+IDeCos9BBBmRa8FnacHfEwPkqKOOSqhBzGxoVUDlCpiCKFaYgGbDaVdMGDafLrzwQgMgV155paFB
+pFmlmlishaSwZ+Ehp6Rl0tRrptJ8qPhEPogUEFWD6ccQx3/llVe1687RTBvhN+lgZa0jnXT1+3CS
+OXQZZqJMnTq1UwBxOByW008/3bg+IeC4RrFY4FwEQHE+qgbUtRjdfvvt5hqErycT14N9ZWVxwhH3
+D5nvpEwtsqhevxlAbAvfyA9efbWw+5tzUDmY2g0AgdBDMANJ6ch3JEOo5oOuvsIACM2eB8HnOpGQ
+BmEAqCaWCwDhmnT+DDv87CNIJ57Pw//B4oLmgSPJDy3h7jJIaBk/irQC2FpyOXfSjRoQ7q3XAwde
+aBfqO4Ic4ydE+SBshlXi+y6YUw0ANZcHBxAY4O9yJI2BzGBlc4zmPpQYIPGcVCm0bDodcMABCTWI
+WZhW3T9rFMTuDQE766yzwgCirpTj4BslQyOorzFgJk2aJAAiTTzpewhhwiqZBQET581CIldQXdh0
+sInjI0xqLAzpKZnI4WjZe9X/EQDSX+PfQ4fuS+U7wzO5MsgQ7z7yftavXx96GHgBmW4LL06R3+PP
+9uvbm84444yohYvfGz16NN+DMIDkQtNwDirROajXbwYQaq0k1/izRO7Aga4lLhF9Yseb60DSaSsK
+n+jzd8MSdfTAI9AWmVidEeXSTSy2+2WUik0sXq01gHBTBxZQAEDXMHwe3hueLAj2OAgaC74GVn4O
+zbohwK0AuPsitBjK5igUO/dsgnGeI48CaX2oKndASIM8/qwwsRggnIh0wcH3I9nIGqMmrR8AkQtn
+nX0c5FRwHv40AOQm4T9qP7F8kLgAESssVD3nJjIzEwKED8MmyqBBg/E7FT6AFvKVTiibQBBoAyBH
+HHFEmJMqhbOgoIBmzZo1ar/99gt76Lyviy+5VACE8yB5vftFOef8Gal1VCdbSTiK4//1r+FhXu17
+WdS9W1cOJojzllE8+ffIkSOJs96qcCUyUeU16fkS46sPPvig5YD8/BAg9SQpH4s/m56ePkrmeaQP
+wu8x4wAgidIg/B4zGJJhmvXq1Ste8CGmk071O8iNCJYACJxpThay882RqQBAsrlXd6KSVWEAcc96
+AgDQknisOSRvS9UgwgcRTjo0h25iQYsYTrp34pUFwdx9RF17SwYLNkw0+A22fY+gwMrV5Bo3mVoz
+e8DsY4BoJhZrLfr4W0PA2wCQNgDEg89wlMwFHySAZGNt2mDaePIp0FgcicM5ACAOfNeF86ULr9s9
+gKjChr/DAGIW5uXPH324MNlSbrjhBtMV8K9/fQ28Ko1NOWigSBaFrdxSQBggw8FDUhN5/B6cc2Fi
+XDrxUsuAfv01BxeahQFpBnYGpRQY/kxujx5CQKSTLkEt6TFXXXUVh1JNzaa+ffvSq6++GiZgiUxU
+CZCPPvooTIPccsstFvbt+H02q1S/CeckfIzhI0aGLQB8rnwtCE5kc6LwEDAU1PtnaEBde0pGQxac
+br529fpVkMu/aec6cg0cIsK0vIq3JGdgteVadAAEAvXzkMEU/P6dsOtnE4sBwv6FQ+QbwKHCqq1q
+kMYkpqAAHLoPoudXDIA0jJpYEMgcjEpFhHEzWIi7kg3Hqz/zXEGnp9lzkQvRTDOZKWdWceBDLR/D
+Py5k0h3YfysSlV448QFowCacV/2AsRS0bQXYTgC3iwmXfbWMPDQinamwEzqqQSLDhJEAifRBpKnD
+Qs0A+cokw8wPs7CwUERh9OsqEgIEu5ntb36g/BnOLezcuXMUUzRUsycNYV9oHbGCcphzPiJaM+66
+hx6e+zAdeeSRpoDsDm3wAKgcWLHpoQcfounTpocBRBUqDhgw7YUfCgMxUvg4MYmEaZiAxFut1XOP
+BAg4apZ+/foZAGEfi6+PI3MaAB6zDB8+LASQlFAYmwG0dOlSS2Hh87im++jBWQ/SOajsy0CQgcEm
+nXzWJuzT3XrTzfTAAw/QQw+Frt8UIGXfUEtXUEUAEHaI27LgpHP7nnRksVN60XfgfpFTS9QaoNIB
+wkLnxGfYSY/0QTjMy3Y/mzZsXkWaWJVpBxYEc9BOiKsXYUJxmLYtHf2zLrhdA8hDT2HVR34DzrsE
+SD2ele+1kJPNTno9NJQWxcrD51KElijOONDpJ5rsOP96aoCGcXOuBgC2w9wny+T4GkQNs6oPUwq7
+aqJEPuBYGoQBwgIMn8XSKxdcLoWXxQLHvCOOQoUBRDGL+DMAENXWNtGxxx4b0gp4PSk7mQ4eebDY
+f+QDhi/AESYzm96ULi6pJqrWkefHD8VMA5oBhL8vw8isBaSAGr6MbjpNnz49TIOYBRn4+PL+xQvj
+MkAir//hhx82vX42E0GTiUm25P001FXMsBL1o4/eJAfyCA6x0rL9niYiQi0Ary0rgxqOQpIwgk3L
+VBPOg3izc4Tt32oS5hVOOps9ShRLmmB8fH/SwAIPirEYZNIEc2KfdMM0DSAzH8S5MHBY8LU8CYdw
+6fEXjHvqQR6EfR8PaxFE0Vw4f7GvpF7i+dsfuAs+CpuLbGqBEgMw0hFiEdR+zDTIxo0bTZ1kM8fx
+4/cXdugBC65U/15hUaxYAGGhkqAUvC4IQFVVlYUz+JECLAXo1wIIh5FjAYR9E5AOw1ZQGRCIS3rE
+7e8oQOJxrcwAgvOKCRAQTWMCJFi+Ipsaq0DirSEnNJGXs9W6nc+EP45iueGEb03NpMZzj6dgU0PY
+9bMP0sgAEUlC80RhKzSIlgfRolisTVQfRAJE0zD4LJKEbgbADboGUQAiNRDvix55POSD6GFeD2sr
+wfniKsguKPTKEwBhAHHug8GhJTJzOg8QFmRVe/C/31nYMYDEWiFlHkPVIJEgWLH8R9STrBjFJD9p
+owsTTFlhf22A6NyrMIDGAkii6BGfNwce1HNOpEFiAYT3BWZx2L54v/EAEk+DMHWcXCBt1NnIfeE1
+iAJlCYC0pfQVDjELvgdapRjHdT1+G5HXHm5iIYrVzOxZFj6YWE6YWCKKpTvhHMVigMiuKJpwwkdR
+nHQNIExyZPOLP8thYmiQ627RNchc/Js1iJ5o5DAuAgh00wMhgDz2ZBmzj52CrIj3U8HjQsDIAMiT
+D2kAEec2kJrZxDri9PgaRFId+KbLFZyz0mYa5JGHlJAYvhDrATP9gU2gWCaYmYmlmnd8LhzFqa1t
+HGUZp9FgVCoG2+1mtRX/CRMrEiBby3YKDaxm6s3Awp8BEzlMqBOZqLFMLN6Xzv8KWyM6rUGCAAi5
+yL+lmGqOOg7OuNYulPlLXIcuhBJ16D+yEfIxTDBqigIIm1h+CF9dKqjk4EKpmXIGSAOcdK3zIudU
+hNkTRlZUNQiDhCNerjATa64wsVh7eJhOz5qKAXL9XYqT/lQZaydm6wqA6CYWIl/RGkRoEVxPIoA8
+jUw23/DIFTySAs6fmTZtWrtWwN0BiLTbmeGL8twwJ12+J/ff0OCcwJuUkv8GQOBLifsXorpoWm7Q
+oEFhDj6/poeDDaFOBJB4GsQMILvlgzhsBYE1q6h2wHCYJskCII1ZObDnuf6caRu5tJIFyvpDFJOA
+8yCRXCw2lRw6WTGaaqJxsQAEI4oVaWJp5b2qDzJX1HOwD8IgEb+hlYJTbw+LYjUDFE420QQthTPo
+iokFDeJELoRZAQzCJmibhD5ILICosX1+uGYmQqIH3BkNIgl7026/ndatWzdq/LhxkeFPGjhwINnt
+qK2J+NlTAJE+SHtMrJ9++qmImQPqIqOAISwCx9G3PWViReZUEplY8XwQ/q6D7AWBfy0hZ//BIvzJ
+dR8NoHl4wHzllb8GgrWxdxoFnFWmAGnE+2qikLlY9uRBBllR+CAGWVFzssOd9LwC7t/LiUkmRho+
+yHW3GiaWqkF4/y72QaaGaowa5xUiD8LcMXDBhBmFcC+0iWpiqQBpRduihBoEoT9TsqBuLxsP3sxE
+2BMmFqI+2vG5yAo0FeZrcUZYL7+NxEDcf3cUIGZkRT4XNgHZSTcDSCSXjE1UJPSiACLpJ6rpOGTA
+wA4B5Ek0bht+IEpqQYVR6TrSBI28GbulQbxNBW0oWXVjNAFHrLgHrwMd2b3YuAl1NQSycmguBdva
+TAEiyIrsEOsmViQXS4Z5tSiVZrbFc9LNNAhnyaWDrmkQmFhTBQ9O/LQ9/hx8EJh3ugZhUy5Mg8BJ
+Z4DwqAb2QbhuJCFALj3vYlMTS1K4uexWJrAiTYQ9ARCETcXxmS3L4BCCwFwiDgq8+24YHToRWjoK
+kFhh3o5EsaQGliaW1LYqgVHeP72cttMmllhI9FzInvRB+IT87soCH3zMAOjl3LGd8yBa6WwmeUDy
+qwf9o+30Y6K0Nn+Xw7zSSY8VxZJcLC3Mq5k4HYtiaT4Iaw7+PgNFOOkKQFxPPQUnHGahvn8GiBPa
+EFl14YO0PfY0AALiY0fCvJILxVQSLZ6vJaMkQPhvfo2BwhwgVUjN6O5MjWA6huqkS4asNJ/UKBZA
+pgEEqzBnvPnvTK7rwKo5EU7ttm272t0VZXcAwseVQYpIDWLQVkBD6dd/ED06Z67hpL744ovhTAA9
+0WlWJan7UMYtHDCgryVLIWNG+ljspA9DcZIaPpb3qKMmVqI8SNBWU0CTr4LPkYwoFPfh7SLo4k7u
+w4ucCJfZ+mYJZkTUD/sgDBBuqqAVTXFWvSfVTJmi1aSPPJqa0lhjMLcqlMeQXCxmVYCeIDo2Crat
+GsUy8iChKJbMg3DtiOqkt4koFp+DlsmvQGDBjjIDX+5+CCzQ3LbZTxW7mE4PxnFLLsY3YCEIHC+C
+QNqPWR4EghxGt+aHxFVrnHEVK5ZC3hswYEBME4E/KxsOyEz6t98uFfvgTY1CQagMqsml511UlAqG
+rnoseUxOcHFbG7OHYvZaRwGimlhSA0g6PZtY5513XtR5RSYKIcQRGlgDuSzDFdcCocvS6+wDAZ4A
+oP3AJ7F0Q91MrDyPGsVSAcx/dxQgiXyQ4Np1Bf6JU0Rdh3C4IfDNGJDjSUUnEQgujzGgDwT72RQg
+momFyBI+70LFHwOsvM8w2nXuFHL32R9RLHawoZ10J1vNpIswc+FzAiBRYd6IRKEopJKOeoSTHqK7
+89wS5EEASG4S4UofpkWxHnoFGgZZfmgxL2rifQCI/7ix8QEC+rYBEIMqcshwmjNnTphwKCaEcYNi
+mVjDhuYzTYSm33kXdUF2lR8okxZzuIGDtsIaK7D0gQRAdPNBgA2Ck2YS+YkHlo4CRDWx+JhSU6C9
+DtfOUy7qwyVwmSHMmlStiedzQbcT0yhWGECURWbnzs0GQPj+9esv/JKwhUhG6eKFeTlPFHkvdscH
+CX67vMB/2h8gULDhQSvhnEaroIdzdjyXdmVifV1bFBMgnEhEfQfZYQXU5wBYIE16U4aAznGgIA5y
+Iwc/6OqcH2F2LTv+fj2KxdR5emye3kFFK6bi74QnCjmKFQrzak46EonX3xHyQYx6EAAE58KfD6Cm
+HcECAZDqm+8TPoiDGb84Fz+utfnwk+IDJLd79zA2LT+sIaj6e+4p0RYlnP6tmV8xAcKf51WfzaxL
+LrmEUhTnVQKsW/deBMEwACLDpOaJNq0jyt133dWuzoKdBYha0MXH23fffVHY1dtUq0VWRJrR9Xkf
+Rp0630PdyebX0XDCAIhqosqCJv6MZOtqYd7hpq2Q9pQP4rDViOZp3sK3CnzopMhdQbzQAIJXhb+d
+CPXa4Y/Yu4DFa/05JkC4qwn3napLAxjS2VRCxhw8LgcEtQ5Z8SYIvOZ3cB2GVo8RBpAZc/AdzTQS
+USxBS+FEoYxiPYT38L6iQZhpHGZi6QDhgiwfcjnbUMvigGlXkaIBpOoPl5cxqKQPwwBJqEGQnVZ8
+AI0sxyvYF198oZlGysqqr7AGQNQHrK7AUthTEf7MQckof4+Bk4XKrn59+9Bbr4fYsGpNullykrP5
+nIT721tvza2rq6v5NTQIA4S1VQ7Oka+fCX/cC4v/jlwkDjnkEDYPw+pZstiM1Plm/Hk+X+Rwor7L
+76lteyZMGm/p27+PVuWnV1TyZ6QG+U/kQaz2LWtpFrhOX/5CDYNOhcbA6otMuAYQDN1EqNeOe7Fj
+EIiDzdtMAaLR3aFxsFr7uTmciFKlIc+ACbfZaTqtA8k/3UcRmXQlzCs0yPR7dYCEKg7DuVjRGoQB
+o+ZBVBOLyYhbQZtvwhbotT8FKneQ/aSzxTGkE88zT/zHnRBfg+CBCDat6mucctLJ9OPqnwz/QW3c
+hhaaYSZCZGdDrsLLzs4yLXnlh8+RMFXAWODNkmps7qltd/5ccFNU47pIsHReg6AcNTdDBAnUgq9M
+AEY0b1OEH+TJsDAnqDBFomZED1PzNbIPxj6MGeBfeeEv5hpE7wsmv29W76E+oz3lg9Rs/EUDyKsf
+kS9rX72WA5QOARBsmEnIZbbuM4+npjnhTTvk/ecoVqugp3DuoSd692qUEI6COUGTZzCwYy0iT9AM
+HtR5sI8go1gCINAgbfBBOFfCDbI1DQKuVEQeRPVhIjUI091bEBxgegz7QH4QJK1sJmYfRDsvupZs
+oMszcNiEqxOJRIR5z5wUGyAQVAtTuiNXMJgN3GY0ysSINBESlbyqD1Qm0zZtCAFM3mBOCvK+jZpq
+XWtxwwXemIPVHwGCE044wahHwQod1RC5swBRz1MGGswo7HyOOp3DwKZZPYsZQCQVRf1+ojA509k5
+oHHfffeJoIncmPSIvrxRq3lnuFjbln2lAeTpN0AnQR236EKoUUKaYSIxSMpS0N1wyh8o+M0bpo3v
+1Ew6C2eTHkViQffptA/ZiMHB5bOiXiPE1RIAmckmFpozQHA9DJAosqKmQSQXS8uDhPsgnoeeEWFe
+pstz3Uggtx/VYuHzpgyk7T2GAoCs2fh7omGEiLbRBXEAEosty3XS0oZmARXCq2/IHMfVINLEEARD
+vfEaawPWNOhSbqqidYdT5ED4+8LckDXZyuodyYbdUxokUoNGctE0MytFZPC93lAUSj++0MCqiWSq
+QVK0zoi6Iy2+moisGM+cNHuvM1ys9evRzXsWwjkP3i9WfDan3EgOCoAgisU2PA/jpLuuA4s3vDez
+oUH0MC/PLXRA6Nyo2BOrdHpvsuP7vGqzWcPVgMyyFRluLs3VS24FQFAQxfUeDQAk+yAGWdEkiiXM
+M7NEIRrHMYj4+3z+NpAfa1GXz50cSzOhUbg1KrSKG8dvQa9eQWW56trYGoQ7r485faxazI8HnUmT
+L7qYuFu7an/LGH0sEyHKnIBgs3nCZgrvJzUVWhyxbrMHO2n0pGyuQjSz+WXJqzw+NEdUJlfuc3c0
+SKxmd/K46EUV1TxaBUiYiXrKKZqJpTes0K5fy7ZfccUVpiaW+v1YdP5EgIkXxYpLd59/ezZdeSHY
+uykwPdDwDaWpLNRtgqqRRVVdkE1/8zn0oHLH1CAiRCsSc8yhknT2dJ1zxf1yWeil76E56fYUrTev
+1CDcv5ejT1oUK5qsyGxeAxzYF2fE2QST94UThVqkS3P2uWmDT8+9aMlJpuJrgOX3m5mqcoPoaqn9
+ROZB0G7fMubEk4xKPikMM2fdKx6wpLurDy+RicB2fCT1Qv0+wp9RAi6aN8OM4ByECkr+OxIgqoDt
+UQ2ir/BGxIlLVtn/gJCnQmjmzXsCPlBpmICoJqp6jdyIj+9fn95aXbhM9PHfmHmSUAN3FiCdMbGE
+XFQ3UOPppyLMmgLTI91wYnml51W2ApbAhnGnxqwnYROLAaLVkKAZQ4YGhCaYaHaYbGK1FwRDjarO
+YGFhtSfnRgAkJ6ygSoRx40Sxopx0JApFnoMrEkWkTCE26gRHJjM2dh8oOp24UaBFjyhNrCMB8rfX
+XrYcqnfm4/sknXGZSTZzMu+dOdP0AQtBMDobgi6PRg8qf0iC74BhI6iyUpvPoP5wGavaZ1ecT0QU
+iffB7YdQ5BX1fd5XRzWIWpMuE5mRXVlkKx4+n4//+c8wDSg0sFISLK4R24Wwaxkg3GxPAl78hoo/
+5ZRTEmoQGcVKpDEi3+80QLZVU8tB3Is3LRwgYNyynV7SL5eaZ1yZACBa3QizdBu5+wjMrdYUNLNG
+VxFR5WcIKzvQ4Z0XQxoEIeaYmXStolC0QRUbd5yHgCt098hEoaGxDJMM2g0+kBsmfA0aYYsgwMei
+L7S5BjELI/KDjAcQzMqIuwKqoFKbX7OTjpyLmLche+tGPmA9QmTa3VzuV+3Nuyc1iHSi+fozkL/h
+c9WEWmt9yu9HhrnRxseCwEFUJpzbEjFAImvkeX9q8+k97YN01sQCXYHq9+0H4cQkW24WBzudW3Ny
+mNYBrbJxIFrmvPNu7IpENI5jDcJ9p9gBl61FW2HecDabBZWz31KTxNYg6CaPDLe2Dz0RGFFRqHKx
+RBRLJSvKikKdzStNLNZcfHzmgbWgkZwHoG8AgFvQ35dWr+g4QB588OHwMCULCsKYiUwEVQuxUEmA
+pKSGWn9mITv9yiuvGFQTVchbWlrKuAO8XHUNs0XpzMjvcWRHafpg7KKjGiSSrMj7ZmDIiFs/mEgZ
+epBCakDVxGQTlUuCRRgYBEsZZJiKLvCRAMnGA+F9pGfkJNQg/3ETC5OfPBjIKeYOoosJEwtrcjJh
+o+PfuCdbDjmCgsWr42oQDvPKTvByPggPruGNI0oahYTDu1pJrdrUQdUgbKJxLibaSde4WCqXi6nt
+4T5IKMwrmAAKKDWAoGE1zoWLqjxgeNDQUeSe9mDs3rxqXybVhubet7Hi+GoeIHIFFKsvJwXBs2cz
+gakavfM0O1ytOY+oKAxTBIlGEvC+0ERbtN7cXQ1iamJh/0MHDhKmnGoecVuhbER41NajX379pWXM
+UUcLs0prPMfOeIY4P75/PBUqCuxJSQl9kF/DxIrnpNOLb6OLOhdGpcFM4rJXDSCuzCzRhsd2+gQU
+HNrjAsTNWWnQN7gOnB1ijiL50zBuIE1zmEN+iAYU4YOkaAVTsUws4YMYGuQBPZPOTew0U4sp9KQU
+TMU2sdQgAaJb8Iu8nC855wYK7toWGyCyr1S4WRRq7CZtaKEZ0tOEuTFs2AEJV0CmR1itjfTEE09E
+Od3ZaEEz6bzzRV8rKeDM5mxoaF2AQTI1GCmWN2YMCGQmYV7pI8m+WLsLkFh0d54m1dzsMULb6v1h
+Gojb7RY+UCwT9Z77HxAAUcmOossjt/X5L2mQWAAJuuxF7mmzRfkpaxCeEMVjy5hewtlwUBeo4aIL
+4lJ92Elv5HY7oJZz3iSQ2Ue0+NyamUeb0bcsCOAwYGQESnRvTwCQaKpJyAeR+4li86pcLF1jcSRO
+JirZF2pLAR0G2s52wJGJB+gYGgAPTqO7a20+8eyFAKgroPaA0bRMGV8Qy4aWfZ2gQSycCxEAgw/C
+PWb5b9k6M1LA5b+PP/74QtGBUR//pmo3bjC9p7uaaAtAiG5/54y7NBMJFYAysibNR5WsyGTCkRg0
+w+/xJoMUs2ZqUcAr/vjHcC0E7apyuf6TPkgsunuwemdRzdSrRQTLIQDCVIx+qCjk+R5ptAvXZb3x
+nrgAYaqJh00sUIm0Zg+9qQo+ya5DjyfPA/cDMGz39xUJOulkR1FNkCjkPAhrG27bY4R5bwo1bdAS
+hXoUDD5KlA+CKBb7UZJKwpqqTQ8OiBp1bNVoSRTAMahQjPwL/4mMYhlsUsWGVgEinUzRyFnnCuUk
+JSfUIFKAYwmAbPwWCyDwRQrz0JiBeWCpIpcQnojT23DutonVmb5YatOGWCbqY489KABiVpGoRuES
+ZdJ5iu9T8+eLDDo3fZt59wyaOX0GMfOgvr4+6gF3xkn3Lv+hyIOu6m4GBFf5oVEDl75yvqAZoNmS
+DqLiq68k1CDspGt2v3nr0VDbH90HwXHKk0Q1aVI5Jwofnieq/+oByliJQpkHMULGJlEsbj3azGRH
+rm4EN8zNQYe0HrTpkuuo+rRJtBGN9qhiW9QQUCGLkQDhxm7sJ4SZWEprTqlBJNuVnVA4se22oXdn
+hUTrT34ogiZvlunGe78aQNpbUYgWpRbmkUWen/ThIhvP8fXw0E0Zpk4EEGnC8fe437E6ObijXKxY
+GsT7+WdFngMPh3DDxOJMtz4LRNSDYGEqwbhn3xLxLGL+aHmQLBElciK060qHky2ScaEBOuz4s3bg
+Pr+STSvfZ4D4Zz8imjIw0VH0xZJsXiOTrrF5w+tJInwQXYNoPhBrDGTScV0utGetpnrhQ3msTnvs
+C6HwRUeaQKoJo9LRVRs6A32R2ATriIkQMuH0KBg4PWprzXg3nd+7wKRgSUaTzPpC7W4Uy0iU6o3j
+EjVtMNjMETXj77zzgdAgt94qsrxhAFJHqCVqeqH6OEbXFH1Uw56iu7vefquoBT4DU0S4plyWzIpO
+Jjj3iuEjKbC9tB0A4TwIuqqL0cta0wQVIM1o+8MRJFlyqznqGoA4IkmPPyMKmBzwV0IAQVMFNGXg
+e0kztZLbcC6WOd1dRMnY3wAXi5kBNTn9xfk32Ctig8NMg+A1i1ky8IiDDyPmY8kVS/1MRwECn0XP
+1IdGjHGvWKkBZkyfXsTJNm4QhwE9gu3Lmmvt2h/oH//4UOQkuJCKp1aJmnV9TNnq1aujTIw9BRCZ
+BzJrPaqaWGFBDj0TzwsAa4mxY8dyzsPwT2QiUq1INNUguMaRIw8RJcuRQQAGm/RzOqpBzJz0oLvJ
+QgvfgtOqDb5kULCJxf2wmLRYh+PVnHU0Bd3WuADhATrSxHKkgiqCvliR4w9k4zijeTXAgom3WhSL
++3L97WVDg8iQcHjbn5CTLisKYxVMafUg2rUwaGXBVKIF2azk1gAI33ymdYSNCzCph9g/v/0mQjy2
+rwTIKadp80GywAGT8zn43ywAaO48SnY/jzRjzATkPw2QyDHUqgAzA1lyy9T5Jezky9aliUxQ84Ip
+raR3T2iQ4K5SC82dg9WWGx1kagIl8xT4mwHSdqXS3DmGhGnzQbSuJtIHiRzBps0oDPXmVaNYvFsH
+OisGeHahbmKZ5UEkmzdUkx67HoRLasWkKfgh5XrBVIcB8vHHHxsmQKgmO/YQThZStf1/IhOhPQCR
+TRukeSNDuQyA1tbWUbwSR1LPWUD0ktawa95TAOlAX6ywBUZS5dVMvMol42tUmQCJ7p95yW3nAGLm
+gwQRBHBPu06YNly3IYZwivAo08XTsPImUesDN0dHeyIkTfNB2MTSJkyxiSPqPRQfRI4/EL159a4k
+al8s5EQAEC2Rx5n2WH2xjBCvSPxFm1ihehCMN0hDxCqnR+c1iEiUwS+I5EyJ1Zpt5y7gU6WGiqn4
+9YQmAr4XL4ql+DvCyVYBovpCDBD8jGKzy8wM3BMA6UxfrIjWo5xkijsPUb0mBn8XVFjKEXTtA8iw
+dpfcdrQm3ffFFxbXpAsFQFw84kA46Tz0srcAiA3VgPTmU+0CCDd6aEN2mueDcOtR0VpU6c0rNIhu
++gi2rTLkU/ghSXkFnB/RAKpl0s06K4YIiOZcLCYjMlVFzGEHgLzQ5DV604YOa5AX//K8oUFER3Vl
+TEGYSaNQPVQBSRSFUd9Xa651bWEKEBY4VUPIgqTI1p56W51fVYMk8kFSMzMt2eiEHuu+RQKb/81R
+QwBD5JkSmViqBsmF7yWa6ul5pT1hYrnfecfiOJEHZ2oDcpgqYowngIlV2x108GXKkMu4JhbPIufZ
+HOZTbtlJFwM4RV8sjRYvM+m8W3tSdgFhzAKHZ0XjN5OCKUlWlD6ImFKrdFaUmXShgZCLaQFR0p2T
+3XmAFD4fAkikiSP/HWki8KzCGTNmiAdstgLyTMFDDjtMOJksAAPz0PyAi6dMJijF0yBK147wkmC9
+7xRYxb+ak97eMC9mDGoJQqbFM1eNh3DqjGbxukmis1efPnT8scfGBUjYiLVhB5p2VuwoQMxMLLIV
+U9s++8I8AiUdxU1MAQ9iTLIbq3c9hH17v32JKs0bNahYUX0QOaMwcoCOB4GAauxfnQ+iNo6zCR+k
+NzqoQAtx42z04mrgPMcNd2hRrAefMdi8krbCjrja1YTrQXimiVbSC3MP++PuiwgYtKvpR5STrq6Q
+akUcM1fNzBp++Lldcujci6JXQPl9BpRsHKeukKoGiKdBJDClEx6ra4g+m/xX0SDtjWL9/e9idQ0b
+EWeYVBEj0CKCDO0CCE/QGsXlCMpkKXl/1q9fF7VAdLSikDYUUdtAHnuWiqw0V/xBg8CRDqBgil/b
+se9QorpN7TKxuHGcSPRxzbmuIdQRbA08BlrJg0R2VmQfxK+TC/2ijy+HgQGAqRi3oIR5wzPxANBN
+oYbqWmdFjJEWhV4AOeYTtqL5HdqMdg4gMs6vtr0xMwvkQ2GA8Cbb9kgAqIlEpoLw4M1Y4w8S+yDh
+TqgESKSJ9Z8AiHlv3tAINrNMPFNksnTmrjrCTg7hZDMJtmVcgMTri8WA1O9FVKK0o5l0WrqQ2rrB
+V4AG4ew5aw02g/wMFgCk8qSjqe699xJ2tuSmDTKKJZ10bQZIeKLQ8EH0tj9qd3cNIByW5XpxnouI
+Lu3dBxFdfasBkFAUS/NhmIvlv+V+A8ASIBprWGoQ3qeWB0n4E5lJv+kmMdBF40opQzDjOZ6cG5EA
+MTOxWEAklaSjUSwNPOYAiQzzPvPEvP+6iSXHSPP9ChVchQc15HnLehN1iGYsJ92s7U+kj4hjRgGk
+owVT9AKy1+hawg65R7QZxahm1iBYuat45NpZJxFHuhIJFnOxuHEcz+zQMunRMwq17u6xR7A5cmFi
+6QN0NKoJqCKoZzc0CCJl0geRJhY3YVBHsGkmFloWiZp0aDPWILtjYl16qYhxR5lTZlpEgobJh3DU
+w1ZAVUD4b3VGYSSVJVKDXHnllVrjOh7Bpk+Q4n9/vfhzAYDj0BpV7TsltdmecNJjRbHa64PoWizk
+d7APopE9jdB0ZK07v8dDQjl7LKkqYfcvQaJQacG0+xrkrunkBc9OdDIRNeVoUg3bn3MhlUzRuPES
+NGqoSwgQMx8kMg8SmShUfRR+zhpAQEcR458BEAQJbIiMBS6dShVBJwVuvB3nyMAL9fYVicIFLysa
+RJtyK3p7cchZ90HkjMJEQI/yQY47+hjUbnAduOZEi+Zu2NQhlGqYUnFAE0ZhcDIpX34pWlVGcZXU
+TPpdd91VpE5nkhpNAUBY1xAJkD0R5t3d7u7Sh1P7huUgSsXa2Lhu1tCgh6i9iWU9TCyyI0/Q4im3
+/H4+6PWRY7DV+6c+9I5okEBDtdNpuRi+R4ZIEHIndKakawDpQVsgD/55D6OwzdEugMg8CGsJjmZF
+OumyuzsfgwuWOCGomljugQcWeOD78Pe1eg00WEBXFZp8XZgPYtS0i4rDXKIX3ogysbRMuuaDOKAZ
+Ow0QrveQLF0VCNw9kCvlOIsdrWHQcTAzOwogUsNkQiA4CrNq1So6d8IEUw11wAEH0mgIAD/cRx99
+tCi8WYNmYumr+Kiz/xC9D37/18ykt1eDRPoofF6cPT8gP594djpMTOP61Z5fM+69VxR8qT0B1PvP
++7HbW5iuMoqpPSoAeQGTPl7kitgRJz1Qs93pPHosqOWZgt/EQstdSRqQy+CVejX8hOBbz7dr/ITR
+F4vtfj3MqzWR6yK+b0yYEgN0tERhpJPuPvTYAuo+AKYdNBqaPni5EpE7Hx4+WgPIzXeGmVha2x8A
+6I3Q7Hnpg2gACfkg6IHVOR/ErOJN9TGMiruIkldubM2dSMwqCpPT0L9XL8/NMsmtcMhXco345snu
+6LIeQ2qI88edS38q+NMo7kUlBSQykRgpIHsqkx5vgI6aBzJz4vXzl00lwjLt8jq4IIsBgs3C7YRU
+k1bmOV5//XVRmmymgblFErdK2h2ABEu2OFuHHy5Iijwgx9mlD8pju4rBOW4I1xqU4NLKL9oNEKlB
+mIvlTteGcapRrBb2b5REYeSMQvfYcwqoV74IBTfg+6xBAii42tV9CAUqKqki/0ThuLOfwwBjVi9X
+L6KThqFBrA89XRaAmcgO+h7xQfqiTy4PmucHJKNEZgCJdJClidCezopSs3DvW232SDKpGkQ2r1aD
+BDEjaYqN/59g8yaakx7ZlEEBcBRA1Jp1buowf/78bKOmXQZKuFwZ94cdciMvBY3ErAbppPP9PAN9
+t7CP3fJBPO+96vT0HUpelEezucN2O3dBdAAgjTiHDd0gfLVbOgCQ+PUgDoR5w5x0gFG2/akI+vz1
+0+ZM3tG7DwIE6WIClcYqZidb62ISQNtQa04/kUdhf4mz9lb4GO7UAwwTsA2N45hqwglP1QfpdB7E
+rK2OmumNZ6ObaZBYgh0JMLVgqrm5WRu/IIU/VjZfoXT8rxRMdQggitDztFsuOTbrq5XoHvK9uv6m
+mwTAOqJBIhOFbQuecLp79cUoZO6py8xXFqo8oUEacYyao0+mQFt1BwASvx5EUk04V9KCSBcDAKaP
+sX//z2sLmocdCuFPN5otqHXsbAI2wD/iqkAHqCw894MOOIrcY8aHAQT8L52ZvAfyIKmc4dYfnHww
+2Tm5sJ21RGC8mm02EdqjQYz96rmBTDiwaJ4WVpNurJb6dKt4UTQWECYvshP73zaxJEBMTMBoDaIA
+RK2pR+CjSM2+R+4r8l7w9csoWGcBQtRSaL39Vowr6I6EYLKghjdBAFsggFxFiKIJCt59T8IEoTx+
+iKwYux6EASKaYQuqCbqT4Ded/0d0ayRLOU+Ywk/1UC7c0prL8cbkSW7dI7og4jt1KJflRKZbB4j/
+iLHkfvKZEEAefaKsTpTsatpMi2J1Mg/icHhFxZ7UIjLKoppYsQAiTYSOAESCgAHCAy7VFZDj/klY
+uUKN58xzCdo+kulQVIhxIvLXAkh7nXSmrkvtZ8xYVGr68Z4gM6YgE85cNH14EKk+BCdCI1uuxtMi
+ah4l8vrbmygM+KyF1RPOoyDmZzghSG3IbTkyINyoKfdgZeY6dPrinXYDpD31IDwnnTUVm0gcMWMT
+SI6JFo48eQt2/eFimFigugBM4W1KMYYhnYEF5z27HzXzWDX83Tz2fKLSUgUgHOaFBtGd9N3KgxQX
+/yQAIgVXToDKBX9Isk1VOrzqIEsToaMAkceSTr58wPPmiaRfu/Mx3HfKzMToqJO+u3mQTPgHqRB8
+1YfjnlqDB/YTGgSazhJJ2+HrVJtO8JRcfi0eWdS49zA/B/TsRdN1LlxHNIhaMOUrXlnoGXWC5nOg
+PSivthxirQPx0oMI1maW102iu3+7ftpTDyIBIjVIZBSLD1T71DMYcDNIZ/MyW1frD8y/GzDUx5Pa
+F+cHAGC8ArL01HDkeWEmoPfxZ+GDoMVPmAbh73eCi/XDDz8YAFGFfxBCu7MfeCCuiYD2mcJJ7ChA
+WBAykZiCpghrHbplyxaN9Ge0Lo2nQZKosLDwV2kcJwHcXg2irvQyl8NzHNE7TFxfrBmEsusLf6at
+ra2I8xopEE7ZVSaeBlHbDnUGIMFgE+bjrSYnqhY5nMtmD5s1TDWpQzTLDRNrwyBEsOwVHQJIonoQ
+le7OK3xkopCvJeCqKFubsi/OAWaV0vSNE5dNMLHaxAxEmExIJJZBy/ifeysMIDyDkKfYGjmd3cmD
+SIAwX0h9IJH1DmY2sKRCmLJ5I3yayO+btQ5lsDHo2qNFVDbxr21imYVx+6CE+IVHtSm3ZoKsmqix
+6Ow9e3SnwQpV5J47p1NSKgIVmBMfDxx8f9TWr50CiG1XfuD9heTGtF7WHLI01ZUBLhY4WU3QiM1X
+X0zlJkGAWOpE5kHi1YOIRKHIg+hdTTiMq5fcqvttuxK+kRjeo3Vg50iWNpZNaz7n5UQkQrkcRAjW
+VkZokOcMgISiWJ30QYqKikIahEOL6ejKnpUdVhCFEzetWe8MQPjhsgO63377UkNDQ1TzaaavMI0l
+poOudzfh3A1+9kjz6s62/cEM9MkYwyDuH29qpluNAsbiWkWSDW02mzECO2aIOxTFi2n2tKdgKmjb
+kO8oxMg0znsgYsTCyEM6W7hoCiu78D/m3422OCuifLx4AHFwy5849SCy7Y9Kd1crCuW+afkKEcbl
+TDj39hUbN2AAHb+em9nlDACI0fvq1mlUSx5TE4vHKKh5kE6ZWE/OflQ84AzM7chD13FhS4MSMaRX
+Hj1y662Ty/0OnuA0qjtUv+BIcRhWjANIpkNGaE0Fxp82wdInD7kUHWBJuWgShz5WXaGq+bWUHDRj
+S8vBvL9k6oLWnMmYngrzyGgbpN7wxT+uKjgYtQmcSMwUHVQQYUM3x0xEv7i3LwcRuLsjwpVR37c5
+XGLa1EmnYLQACn8k1SMHDz01C5n5nBTTTOpfXn4dAo6CJ2XIJptKM6drjeMKbuC54Pr1I/nZKy2d
++vQZQs/NeXLyD98uEfevhz6oNAcPLxUd7bt17UOXTbxUq5c5bbzlgN4DYDriHqArZRqc9S6Y3tsH
+9xtvZzcEGybwxiHz5+bOQ05Ku8/s0IsxDDh3We3Jx/roo1DW2ExYH537BN8b/fs4Hx4/jX9z+YHL
+66NKojwqLadGtEvlrom+VAzKScVEJ9xjF4beuHCta3JQxvrl5+Z9oyIO2oqbVIWqz6Y5j8HkYRZw
+L6rtga6K8M04AvVLUs9PbESfuI8YRbYs0Es4h6H3xmUyYnX6gULA0YrHmBYWfPzZ/OaLLsfgHR6R
+xuMXUBvCTSSQr+Hmdl4uvDruXKIyYZaLHyt5yRa0kw+8rCoA1a8DhIeQMvGypMdhOFNfzNapxmWp
+bN55M+9xMg8rFQLFUZaeaNKcAgHv13swVeyqIg69CScTQs0CxM5nL/BzemoPVzxghIMtvXr1Fr5D
+Mvo29UJf2t7Y+mBTV0LWDJMnX0GYThXXrn3vhVfKuvfsoZlavAFs/Dfvsyv28fEXi+N+/w8TzxIC
+0hMPn5OSaQBlKrYhuagbQC+9SKH629/epCywhxn4vREZ6crXiu/fcvtt1FbrpqlXXiFMn2xUpSVl
+ME09mfJ6D6RpWEBKkInmz3bHsdIztfd5ccjJzSM0otCpOOMtPXF/5AKUgvvIjSn4ez9VbA67lp3b
+KguGH3wI9YITnoqFhfsAc8SKTTY066PLJ15IixYtMh1gw9fl91PBiwte1djQ4B/179eXTjzkKLrh
+uuvpxZdeEguEf4e1zL1gAdm4SAqA5uEyPA2Kp0o503si8ZZKW4eDYm7fCg5Webs0CDU4i1x3PEnl
+6J7oSssna58DMdF2H+zvAGq7sECUTQdHHg3N1Ad+BOgjGIfmAI2kPmkgbUbXxDqqE2FeJAvfls/n
+l7/8pdB2yAkCIFy8VYfz4gm6DMCdXfcn+vRDolmzUux2u5jQyz9Br7sg+PzrACp8mIxh4jgNqUOo
+Pu0AKt0XczGptmMAkauu2UokX+Oro13WMLKap7J5uKfGNSPe99r7XmXQOYE39fM//7wcvbeGCmEM
+TadKpXdefZncu8IH2Bg3Bzc4UFtr3GD+m/v9yvfRD8nfZK+43m6vHK4eCzd4Am8yDm9rcufbmyuH
+21w14voqyG88APk93DfRW0mueoG60EOKdd08T9Hutl7P+5afqfRFz1isqKgsu3DCeErKgiZmDYKO
+8dwzYMqUK2jHjk2JH3CME7D77f7g8s2TaeHnVDPmHFDcOWsOSkkaokLY6gCQZgghR6+c0wogTHZT
+EzbW9Ym2PVjFg0GbAHCtr/ZtwZ+qqIu6f+o+vKs2xHw/+K9lzk2HnUwNafsCwBh4kzKUNg7Kp+Cz
+mAzQFD1fRt1vi6dCOz45KVhfQYGqKtpBwcT3L7IehHdqc7iNk6x1Wk0ba6GptFCBQHn8xlsJkOGw
+Vcf8PuzwGRBWQ4CW/LDMec9dd9NXCz/mgTtiBdxcv6tDx1cBGLl/3l9dnSPuAzQDSLHHPrzMa2vX
+AmH2/RKfOwxgkbesqak0v2zbOvr5hXdpPdpktqxbRIGSReT/aQUFMBavbdUG8v34MwVWrKS25Z+S
+d80PeH0FBf+F38vwGbweWLGKfMu/JO+yxeTbuJS8X3xOLpQobz38VLJ3g0klemBxEo6bTCM/Ad+h
+Ahn19f1BL/8+egJY5Dnyas+LSnsXwnifU+Uv8nNEDgp++wPVzniE6J0vyP3NmjANWuq3Gc/P1uqa
+YW/2hC2A6v7q6lohX80x3xefjQSIz+6ZwFusC7D66iyE9US+vzPgKPPWOKN8ADz0qImzsfbZxGFG
+/JTHUOFyhW7PzS/xa+BmbcGrlg7imraa1gWqBpH7YuHEeNh+/jpNwEuDngm8qcdytIV33wvYS8NA
+5K3ZLAS8Iuh3VvqtUVSMJr44147JUsP4/ZVrZ2E1K/HZDA1ndm0N9soCatxJ1lXLyHNLAbmvv5E8
+Z0ykRnSXtJ85mhotJ1Pr6WdR25mXUP1pF5P7+HFkH3ccWceeRs4zxmFM80TxvuMMCzVZTqFWfm3M
+WeQ+AdnmY0dTw/AR5AfxrxV2uRdgYM5VEzqdt0GbeLm8FiZyw7TLyU0N5PDGX6Hb82zEPTLRwOp3
+4efGXaDaexz1cwwSu9N9vWoh6f504t1JgNQ6a4QJ0vTk3yy0eKkBALLuLNv89HN4SGsmB6qrna1/
+nkXFF/2RvD9uNpxceuUfFKzcJlSwf2ctub/9jhyuXWS/+zFyznmeau+bR1T0HTc5TbG7rOIGlIOW
+0vL3hVQzYy7Z7nsMnTKWCRuSfv6F2tDV23bvo9RwP15f8D5Vbl6SZ8eAnLaH5lHNTfeQd+lXwmEO
+VJbQjnvvpx0z76eGh58g2/SHyWUrI++j86kUE1pt98yl+lnzjWvxflXkbL0Mgvbiq+QPVJNr/Y/k
+ve8F2vbQA2S9dy41oQrO9uLznwSbGpfKOxdcvbqs8oqbqen5l4jP2VHlsNCHX4Tuj91RVnLbNGOB
+oB+W0s4x55L/w39QIKDZuLS1hNB8Vzi5vu++trjmPk2l51xOwZ3r8Jlq8q3/iRx3zqGyBx8g1/RH
+qfrl1yhQX+cM2u3X4zr7eT7/nMpRJ84xf28qWKupyDhzxZ+YAchUDq1oKIAWnQ4ItQ/+GfsQDRB4
+5ifxYBju0q6NGONptd0FsU8bbcCblvcQWW1QTfgzuxAQWTFgf/L9++/kd201DaIklq7Of0J10s32
+wtoKi1vMBQaLWtQCDevAeK3DAJEnYV31Ey3f/xQKtmmtJbc/MLts2ckYloIylc033uJcCSepBM7W
+kn5HoD/SP+dC5RWvG3Q80ffLBUB8Xy+lmoeeIH/DRipJGkLFWSPox4x8quqBz9vthmCtADW7etRJ
+VIp9bcXWPOIkClTvoJYnH6UtiHGvwkPemNSfSsadR3TMFXn2kcfR+pReVJ46kJakwGlcudJpPfbY
+yb903Yd+zBtIPyMWvippH2pdvwaDIvenzZkDqSRjKK3qeSife56zqo7WDNqPtkMAliFx1Pbkg2T9
+6l1Maz2IfsobQBVp++C6htG6mQAz+YSPRR8sLtgw5Hhx3OVwKGnB21S1c/Mo59kXi+tocHgL7GuL
+aVVWVyFAgX9+6dzQdyT9iCExi7J7UpHlCg0gL79BS9Hjif9unfk0fZ++H1lxzRVHnEat9WXU/NY7
+sPX70pbMA2kXti8PPJWcjXZjAfI1VlL9/vuSB845C3UbAgA8XtnDrTTRqbwVoVlvBrfX6Qq6N/wI
+hOYZQG0o1HIg4sh/N+L1agDEicifD5tWEMWhz1QR0mU6CY8gc2Zyg+p0KkaQpeKWqyhQ9wtrj04D
+xEz7J9IinYfVr/BNqUE8NU7NiXE30LqBJ5Dnpw+dDIrW8deQ74SJxTVbN84t6XIINZ1rgX37MW1J
+HUZr9j8dAHEWb+8NBuWWdUIAPknqa2l8/Dnyt26n2gNGk/uHheRZ+Cqo0iOpbmlo9tsKhIQdF5xL
+tr+9Rd6iN+jf3QaT7/MlVPb0X6lx5hNUs6KIGr78mmjFL6x58hxnYSTx95+TD/1aVxx6EtU+Awf9
+w4W05eCjyf/dJ+T9bin538G/162liklXknvNh9T4AzTNCq1FzS/HnFe4BecZ2PUTtV5zJ63qcajz
+J3/tZM+/vyfbHVdR6ZV/It+iL6i2too2U3AU061/SEqfXNzlMPKWLib3rDn0XZ4A2yjbIcdTa1O9
+EGDasKlsnT4hquTsy5z2PgeR46s3yXXeBdR0JrREYWEeLVxIa5/Eraptog37jCbng3eSr2kTFfc9
+nJbg2ugf/6SKa1A+uvhdcn62kGhbaVg0q+nOKfn1pxwKxqs2FNMKgec55e4M0EJ4AlQOCo7QMdDO
+IU991AAzcbmOm7PiDswW5L+Zwt6G4irOKThAQqxDjUUdstAcMuWNI0NV2C8PyNlycH8KbFxCXusq
+cviqOg2QzoisBFBF0DujMgjzCCYS+xOJ9tVuraDvSO4/7n7NnPTluSOLPJdc4vRv/mSyN+8Qqt60
+sTh4/vlztw8/xHhwmwvfJv+kC8Tq3DxkBEyILQIgpUgk+p//K+bQJ6W0Tb2BbKWaE/VDUk5hYHqI
+DVoOgAT+9Gcqvfdx8X51UlZhbeFzRE++QFaN0Gf82EadkE/T5lBQz+RuOmV00b8nnO+ko86Y7D/5
+D2HC5D7iJAvd+aDxmvAxPvooz3XuJCr7TCukIeu2opJMnPN3y7UV/rNPoLW0riLyJ7jivWznLddR
+88J3xXes331TWN0f3/lhJdUfI6oCxc+29SsBkNRioua5VRmgim9YR3UOh2XF4NHZ9hGjqKq6kgLQ
+EADRZN83S5zbR46i9WtWWrj+vH72o+T869Pke/8NzMUIP37YubzxbH5w3AQxvKaVNQR8BtYGXNgk
+xguI6j9tzjjXTTihAXgGIJtXvGl/M3i4BSiXtoLDBBOLi5UEoKBB2ARjgPyIYyw9ejT5X3uf2oK7
+8Hhb4obREwnt//v3zQCy6ZZpRWWDD6bmb5ZQ5ZEnktPrLF4/8IC5wRtuMm6WZ0sNVRw+hiqbK/Oa
+hhxE/nVlQsAQFrTQawv4cyk0ZTLRko/yaslH2+99gJowEEXeMAYI3XIX2Z59QwBkQ1KXQtcDs2nH
+88/S+giAlJ56ar7z1ulUro9osx5/RtGWM89yNh17xuRd508Ke4COMQDI3U8IH6WurkXYqDYIWPUZ
+J1CwplUDCDUWlZ57I1k3/BAbIDhWy8V/RPLJZux/09QbnAQz0HvkaOO1mvUbyrAoFNs3/zKXzTry
+aplcpmXQ5ddyo4M8AjAZIPbHnnA6z70CFhyJBWDz2D8WeL9cSVvf+xu/HwZQ1mAGWBctzPdddqlI
+5NXDpGoAANifYKFm86m9mwaWEBj4e/V4TNYc1H/A76hjztWwfHK+/Za4f/w/Gab9fy/onb0AM4CQ
+fUvRqrR+VHohJrM+NksIw7Kk3oXBt/4aEnCskM6JEyH/H+XZh6Db3kYFIAteEhqEJoLbj0RWsHRZ
+fuDia6n5RQEc8cMAqZx6LTX56/EUmvPc1/6ZyqbdSc3PvwB7PaRBAuWldjZDnFOuJX8LjJ+2Wmoa
+O4mWXf1HZ9MRJ0+uO0eMNEsK1O5CkKE8ezM0SC2GOAbdNZoJVFtbtsNWDhr0eCpX6kXYCdwVtF6/
+DU6wmQbh8/OcfSGtOf/8sDCi9ac1ltaxmGKr/wSr15f9DA1SX/j63F2DRorXORBBSbNSnHfeRa5v
+VpC18FnaCoAUX3q9s/a40zQAKYmwms8+IveC52Mm4vge0o03UU1uJpUic1/TQwMIt+Gpwm9oHypD
+xn0r8iNl8CvK8LsCptJ2bJX4zFb83oGNP7MjLUVsW/nvzHS8l0SrkRAuGZxLG09Grfc/XqBg1a4w
+Dd5Z2fpNfM8MIHxhPx16Aq3oBsEvXyMe+qakjMKGRaGsNdlc1Hz2RVT5yOo8+9D9iHbuFCugNSnV
+4ps3nyrdTjy4XrQJocfNhx9Py1OQ7dywgXZ6g2PsTs+EIGuQ0y8i/6Ii8jzxEm3tui+1ffMJeUBz
+384NymBGbEVAoPWpp4UPEjziZNpy/Fm049SJtBzZUN/XS5xVI4+abM8ZQdaTxlEpurHQxn/Tipx9
+RtVhIu3K1ExoIhT8nHohrT7/njw6+yriY5o9NFMTi8/v6uthAt4bBpBgVZXFNfZE+rLnwbQatRMr
+wCSoTsosDsx/da519BnIAvs/qQgGlnJEzg8TqvnVd8mP7PwOAKTmzEudxWeeGRUGpo/YxEsTTvqm
+lByyX341BWo0gPNPcMOyfJp3L205EN09Rg2ishG9yXbkYHIceQxZjxhE9hEHkf2gEVQ74hiyDT8W
+vw8Wv20jjiXnsIPw+zhsh5J75FF4b4T4rHh/+DHkPuYMKplwDjn/8jC5V7xLAe+OKKrHb0LQO3sR
+sQDShNW+Pn80NU25WQiINSmvsGHZl8bK2VLvoI3g09RW1oFrA4DoPgjmR1jolddESLcqqzdtyB5B
+VemDiZ57mni0rzxPXqEd+x9EJb33p52gG+wYMVrTOi+/CGFKxUrIJDl09cP46c1du+ZtyT+U7D2P
+gROJQe9/fVach3/iHwvquuTTcgjrp1gp65AEq80/bZS1HwCC2SJrAdDyoyzk2bmd7GNOhgbRABKZ
+iIoJkKl/JtsczUeSP47S9RYPBvtsOfFsahl9AtlgijZkZhb7nnh/bv140W1FE2r4GIE5IAC+9h75
+PvgAEb2kySXjJju36ABhDYLMuTABadES2oRrZoDwym67amoYQHYF3flBaqUgggXBqs+pZcP75K1Z
+Sf6qr6gNv9uqV+Dfv5DPWoxtCwXtZYRcDQVaSsFuxd+1peS3llDAid/NG7XNidBzwIaMVjMKLGwU
+aN6O90tg/dWxU75Xg8gHGQsgUNvZNPlqdNFblN9EwfyWm+8m+nxhmInkmjiJljzySF7zPocbAPmJ
+AfKy5qT7jj0RHSYW0erjTyLPCxiUSLNSpHCWg87uOPF4Kj7saCq9AFVgv3wi3mdw8T7k+bGJxXZ8
+/YUXIvv7Dv10xh+wT627+JZRxxfYxmtOeqClQphY1iPGWBqvuY2CjQ2GiVVWvZMax1ooCIBUBoMT
+IEJjAvYQrcPUxMJngxMupg2X/EkARGaKo0yski3CxArOf2Ju+aEYVW0AZEW2F7kYx3uLyfu3NwRA
+YplYTZ8uJtcL82OaWDa3WyRS75g2jXr36AVSKCbFBuNPeIq1YN59992Ww9BIfMjggYT+YzGpFmBQ
+tDvR29nF+f/F9+ICZMqVWLXW5LvJnV+JKarB2ZqTzXQM1hB0+VQ8VArzQUCNhgb5uxbFOudCqvG1
+kfXd18lz3pVwskNNBTjMa8VIZGqroG0Oaz/JdWp+7eUoJ93R3EjNl03RNMx3S6jhuLOEE9n29Rdk
+HXd2mJNeBYDQfU+J920tTrFCb3j22Xzf5X8SWq3Sr/Gkdk26jazLvovppDOA/Vddh15QSXngTYlM
++TfnX+EkNIj2HR2KYm1FFKsyKa048OWiuesHgnksAfLe/Gz/lVdR44+rKfj6O8LEqn30CWftPoca
+JlbNZQUF3n8uoZoP3qSf40SxeJcHHHhgYQ7qdDIFsTGD9h00xJSNnEjoeNiR7KrfFT2TMWE3Jtkx
+0b5+F+/HAsgKaBDvFTdQcIMWpt10xDGFrktDUSzbrnKynnCGCPNahwwl288/Cx+k+ZNFRM88rwnz
+n7Qwb9MBo/JdR59DHPqUN1VEsa7CvOuBx+RJLhK/Ry/8ncd8xQzzWqfdYinvcxjyGbXOqgHDJrdF
+hHl9R41HmHeuIajMFWu+4oq85hNOAslSi0hRzdaiH3seRvYX34wNEEShai5BgnT1eu079dbCkpyR
+qMv+lhqPC0WxrBuWlf3CYV7H9rlloGNTSYnmhE+6PZsmTGGyXx59+Bmt4SjWa6847WPP5HtmYROM
+5j9Plbc9QIEP30BLzdhh3jn3zsk/4aQTKCkXREUML0pDLqMbWMazZ89OTLZTpPje6TMF21iWBPPf
+t/75lrAF5nch9B25yHgACV51BTTINwIg9N7iwi+RXHI/e+cnQWr7pGG4hTYl7y8eUBkcenoPvHuq
+px1nTyH66Fu+6Sneqbfg+8vyOQpjHX85tT3zOgpaWoQAMVgCl99DwTkvhq1g/pfe4pDnqBZ/I7UE
+apkQKkKlrpn3CdDhn1R3wgRyP/QUNX72AXnGjgt7wFT2b6q6cSYF3NW0PmifS7tKiut9dnJc9Ccq
+PfNafNtGjS/8ldb0O5qotU2cv+/NtzmPEJ4HgQC7MGWVzjlfM+GmTStcnYpsOuZptx4VimJRRWkZ
+om7F6MQx90e83jxtJlU1bh7le+FFsh03nipHHJNHX75GmxDJcuxqpI2p6Nzx0+fiWmonXEGu5aup
+9fV/IHLXzTi+x+oK4yNtq98mamn4MciSAW4Ivv+QoR0CSH5+vgCIWk49ZMDAvQCJB5hYAAkmDc6m
+STdStaeRbE4POVsaqfTE0xAzH0Db8g6izTmDkU34p9Agrik3k2vwcFp39LlUP2gUrclHhqytklo4
+crQGERjY0M7p86juzEuNh/EeqCY110ynpggnmF6fR82HnUQ1J1ho18kW2jJ2AtXVbaW2KQWGiYas
+eFHp0BOp7aN/0K6jQ44xX+ea4yZamnsPp6ozx9P2s86lklMmUqB0C1W88A46g/ehkkNOpEok/MrO
+vxIEwlZNg/z4IWgtGkBU4dwy8eqCbRgeYz/0eKrpPZR2jruUGpFJd409x7iOqmW/lMG/EJlmz31P
+OH9BZVsT/KpdcOF23TZb3B9CEVZ5UqbYfyWo5eU5B1HDoWdT7fCjdQ2zmCr3O4LaTryA6k46lYqn
+wPfTo1j6DO887jKpCjcLeZfu3TsEEFRvRgFEn6HYkTX19/XZ2BpkcHbzNUjkQcDlHXE8/45zQ3+E
+EMGRKgWjlKh+7ob68mJPyVpal9WHNqDYplY0Ft48qrW2kson3UG2b7SCnm8unlr48+GI/AQdmgaB
+jV8/7y+04cWPwjQIR6h2gW/F/Ke1qGzbjGMFdpWS+9q7DIB4//Z60dp9zqXKwheoavKN4Rrkp820
+q+dw7fso+loNHpit6ItiUFLnrjnqFFqLWgfbyRPJB+KivK5t779LlQvfiWITB7dtK6ifchV8ou5U
+MRJcss2bUC7XOmrHaSGABDftLPtUBwhZG50/H3sawIA8xeBDyPrC3zUAfvEhOZ7X5qTTsuW0pfeR
+tAHmmOsvTyMBvzmv9a2FtBHFPJszBqLiDoVTp4+jwLYS4/zYT2B/QR2awxoEfZI7BBA0hnBmcGGb
+3oiPT40bSvy+JL6DVxtTg0QUHMndUmUx2T/5FOzdrSE2r60pHw8U9vc6BCNrR7Ek0CxKCVZoYUzm
+04C0cL2/rNJfVW8bwwVJwgaHvRTEd9VTlnRnNQxa4vPUUK1tgXDM8b81OAbvi78XqC23B60Og66u
+EuGCDtDFUSCzMmjtt9Fvvx40c2dwzUqiphBpUqz8y9YN96xaL7g+kXT/YGVDGW1ZRcGNm4UGqHXX
+Lg22ViydhXORFW8BR4gOH9z8k4VWrCV/aYjtjNHKOp0/mB1sqrIwu9e3Zo1x/2RNjcpAhXFJW3we
+AQDUu+cfd+yxRocX7luWjmrO6dOndwggd991l9AgsikH9xPTm1B0UGp+Rx+PBZBYt8CNL7givqSb
+AWFfiSyZjNwfCp06HEZMRIHmY8QrtpHnwDUjDDYmaAqhj1EUFnnOKl3arPoyVmi0EgVVFUpBlYyk
+yYKeYo9neInXIwAa6/xZW7DWkG2IWBt0Rkw5isUg4W1vFKsdd7CjAJG7NCsP5fe42GiD1zVGZVZ2
+pOCpHadsfKSc/AV1bT6qdbgSsk3hWxRSY6Dd5gQXb7EiDNqQpPNUDvd7KxKySWOduwwTx3qfNSyK
+ra5X+Vfys3Lx8fl8hTeh/26vnt3IcsYZ1NjY2CmAlJSU0EEjhtPgQQNEwwc3/MOO3PPf3Wc7A5D2
+1Fxz0q7FVh2zoEVU/Ck147FuPGrHw0pqE1U88vvBna4xsQC8Jx8w1+FzPb7ZPmF2RWlIVes0B5qo
+tkUzofb+/A/fgc4AxOxyKny1hS06NVqaEPJzTViFG0SAlXN18X84081brE9JH0NtqqB+NtH3Ex1f
+fT+yXqAjZcQdOY78LDdSMPsetHGH6u47c+y934lxB9ohs3vv3d478Pu9A3sB8vt99nuvvB13YC9A
+2nGT9n7kd3sH/g84x00MX9kdHgAAAABJRU5ErkJggg==</Image>
+          <Name>Image1</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+        </Image1>
+        <Text11 isKey="true" Ref="6" type="Text">
+          <Border>All;[193:152:89];1;None;False;4;Black</Border>
+          <Brush>EmptyBrush</Brush>
+          <ClientRectangle>4,16.8,10.6,0.6</ClientRectangle>
+          <ComponentStyle>Header3</ComponentStyle>
+          <Conditions isList="true" count="0"/>
+          <Font>Ebrima,12,Bold</Font>
+          <Guid>e36bf89482bdd684b5ac13aa8adf6260</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text11</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Text>THANK YOU FOR THE OPPORTUNITY TO SERVE YOU</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text11>
+        <Text12 isKey="true" Ref="7" type="Text">
+          <Border>All;[193:152:89];1;None;False;4;Black</Border>
+          <Brush>EmptyBrush</Brush>
+          <ClientRectangle>0.8,17.8,5,0.8</ClientRectangle>
+          <ComponentStyle>Header3</ComponentStyle>
+          <Conditions isList="true" count="0"/>
+          <Font>Ebrima,10</Font>
+          <Guid>5b5fa5430bc8a9d6ca5513aab746083c</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text12</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Text>For Queries Please Contact:</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text12>
+        <Text13 isKey="true" Ref="8" type="Text">
+          <Border>All;[193:152:89];1;None;False;4;Black</Border>
+          <Brush>EmptyBrush</Brush>
+          <ClientRectangle>0.8,18.4,13.6,0.6</ClientRectangle>
+          <ComponentStyle>Header3</ComponentStyle>
+          <Conditions isList="true" count="0"/>
+          <Font>Ebrima,10,Bold</Font>
+          <Guid>d9178d8ec08d2f49432113aad7d318a3</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text13</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Text>Steven Gratman; Phone: 1-800-392-5102/ 267-968-0569/ info@abstractshop.com</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text13>
+        <Text15 isKey="true" Ref="9" type="Text">
+          <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>11.4,8.8,2.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0"/>
+          <Font>Ebrima,12,Bold</Font>
+          <GrowToHeight>True</GrowToHeight>
+          <Guid>0908bd0b897ba10dec4a13ab8945cb7a</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text15</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Text>TOTAL</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text15>
+        <Text16 isKey="true" Ref="10" type="Text">
+          <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>14.2,8.8,4.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0"/>
+          <Font>Ebrima,12,Bold</Font>
+          <GrowToHeight>True</GrowToHeight>
+          <Guid>bbb84907b2ac7857c87013abff4070cc</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text16</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Text>$ {DataSource1.Total_Amt}</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text16>
+        <Text10 isKey="true" Ref="11" type="Text">
+          <Border>All;[115:115:115];1;Solid;False;4;Black</Border>
+          <Brush>[53:152:220]</Brush>
+          <ClientRectangle>11.6,10.7,7.4,1.1</ClientRectangle>
+          <ComponentStyle>Header3</ComponentStyle>
+          <Conditions isList="true" count="0"/>
+          <Font>Ebrima,12</Font>
+          <Guid>b3ce38652e76804fad101c6f09fca8d0</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text10</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Text>You May ACH/ Wire your Funds to:</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text10>
+        <Text17 isKey="true" Ref="12" type="Text">
+          <Border>None;[115:115:115];1;Solid;False;4;Black</Border>
+          <Brush>EmptyBrush</Brush>
+          <ClientRectangle>12.2,12.4,6.4,3</ClientRectangle>
+          <ComponentStyle>Header3</ComponentStyle>
+          <Conditions isList="true" count="0"/>
+          <Font>Ebrima,12,Bold</Font>
+          <Guid>c8e16f12eebc570d1ea51c6f3b7ca037</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text17</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Text>TD BANK, N.A
+Wilmington, DE
+ABA #: 031101266
+Account #: 4305180947</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text17>
+        <Text9 isKey="true" Ref="13" type="Text">
+          <Border>None;[115:115:115];1;Solid;False;4;Black</Border>
+          <Brush>EmptyBrush</Brush>
+          <ClientRectangle>1.2,13.8,5.6,1.8</ClientRectangle>
+          <ComponentStyle>Header3</ComponentStyle>
+          <Conditions isList="true" count="0"/>
+          <Font>Ebrima,12,Bold</Font>
+          <Guid>dff85787f15418b8bf611c6fed53a20e</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text9</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Text>Abstract Shop, LLC
+2423 S Alder ST
+Philadelphia, PA 19148</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text9>
+        <Text8 isKey="true" Ref="14" type="Text">
+          <Border>None;[115:115:115];1;Solid;False;4;Black</Border>
+          <Brush>EmptyBrush</Brush>
+          <ClientRectangle>1.2,12,5.6,0.6</ClientRectangle>
+          <ComponentStyle>Header3</ComponentStyle>
+          <Conditions isList="true" count="0"/>
+          <Font>Ebrima,12,Bold</Font>
+          <Guid>8d05aaccd78c053874811c6fed53bee7</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text8</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Text>Abstract Shop, LLC</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text8>
+        <Text6 isKey="true" Ref="15" type="Text">
+          <Border>All;[115:115:115];1;Solid;False;4;Black</Border>
+          <Brush>[53:152:220]</Brush>
+          <ClientRectangle>0.8,10.8,6.8,0.9</ClientRectangle>
+          <ComponentStyle>Header3</ComponentStyle>
+          <Conditions isList="true" count="0"/>
+          <Font>Ebrima,12</Font>
+          <Guid>c5adbd5ae3ecefd3dc851c6fed53567c</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text6</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Text>Please Make Checks Payable to:</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text6>
+        <Text21 isKey="true" Ref="16" type="Text">
+          <Border>All;[115:115:115];1;Solid;False;4;Black</Border>
+          <Brush>[53:152:220]</Brush>
+          <ClientRectangle>0.8,13,6.8,0.6</ClientRectangle>
+          <ComponentStyle>Header3</ComponentStyle>
+          <Conditions isList="true" count="0"/>
+          <Font>Ebrima,12</Font>
+          <Guid>279f20d466eaff3cf78c1c708a67d890</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text21</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Text>Mailing Address:</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text21>
+        <ReportTitle isKey="true" Ref="17" type="ReportTitleBand">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,5</ClientRectangle>
+          <Components isList="true" count="14">
+            <ReportTitleText isKey="true" Ref="18" type="Text">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6,0,7.2,2.2</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>ReportTitleText</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <Text>ABSTRACT SHOP, LLC
+2423 S ALDER ST PHILADELPHIA, PA 19148
+Phone: 800-392-5102; Fax: 215-689-4485</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </ReportTitleText>
+            <Text1 isKey="true" Ref="19" type="Text">
+              <Border>None;[115:115:115];1;Solid;False;4;Black</Border>
+              <Brush>[53:152:220]</Brush>
+              <ClientRectangle>14.8,0.4,4,0.8</ClientRectangle>
+              <ComponentStyle>Header3</ComponentStyle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12,Bold</Font>
+              <Guid>cdf842dbf8825977ecb813a1c9159a1b</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <Text>Invoice No :</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text3 isKey="true" Ref="20" type="Text">
+              <Border>All;[115:115:115];1;Solid;False;4;Black</Border>
+              <Brush>[53:152:220]</Brush>
+              <ClientRectangle>0.8,3,0.8,1.6</ClientRectangle>
+              <ComponentStyle>Header3</ComponentStyle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12</Font>
+              <Guid>c62649c9d17892dc734913a499665d67</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <Text>TO</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+            <Text4 isKey="true" Ref="21" type="Text">
+              <Border>None;[115:115:115];1;Solid;False;4;Black</Border>
+              <Brush>EmptyBrush</Brush>
+              <ClientRectangle>1.6,3,17.4,0.6</ClientRectangle>
+              <ComponentStyle>Header3</ComponentStyle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12,Bold</Font>
+              <Guid>35e805523c9d458b05aa13a5064dfca1</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <Text>{DataSource1.Username}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 isKey="true" Ref="22" type="Text">
+              <Border>None;[115:115:115];1;Solid;False;4;Black</Border>
+              <Brush>EmptyBrush</Brush>
+              <ClientRectangle>1.6,3.8,17.4,0.8</ClientRectangle>
+              <ComponentStyle>Header3</ComponentStyle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12</Font>
+              <Guid>7f76689c0e89bd32ca1613a54834b457</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <Text>{DataSource1.Street}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text14 isKey="true" Ref="23" type="Text">
+              <Border>None;[115:115:115];1;Solid;False;4;Black</Border>
+              <Brush>EmptyBrush</Brush>
+              <ClientRectangle>15.2,1.2,3.2,0.8</ClientRectangle>
+              <ComponentStyle>Header3</ComponentStyle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12,Bold</Font>
+              <Guid>6e7ad98846ce08d374e21734ac55aef2</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <Text>{DataSource1.lpad_tbl_transaction_txn_id_4__0__}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <StartPointPrimitive3 isKey="true" Ref="24" type="Stimulsoft.Report.Components.StiStartPointPrimitive">
+              <ClientRectangle>0.8,5,0,0</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Name>StartPointPrimitive3</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <ReferenceToGuid>f8d6198e7c47a28d68651d762f20e7dc</ReferenceToGuid>
+            </StartPointPrimitive3>
+            <StartPointPrimitive4 isKey="true" Ref="25" type="Stimulsoft.Report.Components.StiStartPointPrimitive">
+              <ClientRectangle>0.8,3,0,0</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Name>StartPointPrimitive4</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <ReferenceToGuid>9fabf01f62f8323276431d77a6e10d52</ReferenceToGuid>
+            </StartPointPrimitive4>
+            <EndPointPrimitive4 isKey="true" Ref="26" type="Stimulsoft.Report.Components.StiEndPointPrimitive">
+              <ClientRectangle>19,4.6,0,0</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Name>EndPointPrimitive4</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <ReferenceToGuid>9fabf01f62f8323276431d77a6e10d52</ReferenceToGuid>
+            </EndPointPrimitive4>
+            <HorizontalLinePrimitive1 isKey="true" Ref="27" type="HorizontalLinePrimitive">
+              <ClientRectangle>2.6,3.8,0,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <Conditions isList="true" count="0"/>
+              <EndCap isKey="true" Ref="28" type="Cap">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>HorizontalLinePrimitive1</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <StartCap isKey="true" Ref="29" type="Cap">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive1>
+            <HorizontalLinePrimitive2 isKey="true" Ref="30" type="HorizontalLinePrimitive">
+              <ClientRectangle>1.6,3.8,17.4,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <Conditions isList="true" count="0"/>
+              <EndCap isKey="true" Ref="31" type="Cap">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>HorizontalLinePrimitive2</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <StartCap isKey="true" Ref="32" type="Cap">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive2>
+            <StartPointPrimitive5 isKey="true" Ref="33" type="Stimulsoft.Report.Components.StiStartPointPrimitive">
+              <ClientRectangle>14.8,0.4,0,0</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Name>StartPointPrimitive5</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <ReferenceToGuid>0343aebe1ebbac8b97a81d7bd2879b2d</ReferenceToGuid>
+            </StartPointPrimitive5>
+            <EndPointPrimitive5 isKey="true" Ref="34" type="Stimulsoft.Report.Components.StiEndPointPrimitive">
+              <ClientRectangle>18.8,2,0,0</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Name>EndPointPrimitive5</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <ReferenceToGuid>0343aebe1ebbac8b97a81d7bd2879b2d</ReferenceToGuid>
+            </EndPointPrimitive5>
+            <HorizontalLinePrimitive3 isKey="true" Ref="35" type="HorizontalLinePrimitive">
+              <ClientRectangle>14.8,1.2,4,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <Conditions isList="true" count="0"/>
+              <EndCap isKey="true" Ref="36" type="Cap">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>HorizontalLinePrimitive3</Name>
+              <Page isRef="4"/>
+              <Parent isRef="17"/>
+              <StartCap isKey="true" Ref="37" type="Cap">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLinePrimitive3>
+          </Components>
+          <Conditions isList="true" count="0"/>
+          <Name>ReportTitle</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+        </ReportTitle>
+        <HeaderBand isKey="true" Ref="38" type="HeaderBand">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,6.2,19,0.8</ClientRectangle>
+          <Components isList="true" count="4">
+            <HeaderTextBand2 isKey="true" Ref="39" type="Text">
+              <Brush>[53:152:220]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.8,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextBand2</Name>
+              <Page isRef="4"/>
+              <Parent isRef="38"/>
+              <Text>Order Date</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextBand2>
+            <HeaderTextBand3 isKey="true" Ref="40" type="Text">
+              <Brush>[53:152:220]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.2,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextBand3</Name>
+              <Page isRef="4"/>
+              <Parent isRef="38"/>
+              <Text>Order Number</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextBand3>
+            <HeaderTextBand4 isKey="true" Ref="41" type="Text">
+              <Brush>[53:152:220]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.6,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextBand4</Name>
+              <Page isRef="4"/>
+              <Parent isRef="38"/>
+              <Text>Order Type</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextBand4>
+            <HeaderTextBand5 isKey="true" Ref="42" type="Text">
+              <Brush>[53:152:220]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14,0,5,0.6</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12,Bold</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderTextBand5</Name>
+              <Page isRef="4"/>
+              <Parent isRef="38"/>
+              <Text>Order Cost</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderTextBand5>
+          </Components>
+          <Conditions isList="true" count="0"/>
+          <Name>HeaderBand</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+        </HeaderBand>
+        <DataBand isKey="true" Ref="43" type="DataBand">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,7.8,19,0.8</ClientRectangle>
+          <Components isList="true" count="4">
+            <DataTextBand2 isKey="true" Ref="44" type="Text">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.8,0,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextBand2</Name>
+              <Page isRef="4"/>
+              <Parent isRef="43"/>
+              <Text>{DataSource1.Joined_Date}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat isKey="true" Ref="45" type="DateFormat">
+                <StringFormat>dd/MM/yyyy</StringFormat>
+              </TextFormat>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextBand2>
+            <DataTextBand3 isKey="true" Ref="46" type="Text">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>5.2,0,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextBand3</Name>
+              <Page isRef="4"/>
+              <Parent isRef="43"/>
+              <Text>{DataSource1.Order_Number}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextBand3>
+            <DataTextBand4 isKey="true" Ref="47" type="Text">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.6,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextBand4</Name>
+              <Page isRef="4"/>
+              <Parent isRef="43"/>
+              <Text>{DataSource1.Product_Type}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextBand4>
+            <DataTextBand5 isKey="true" Ref="48" type="Text">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14,0,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0"/>
+              <Font>Ebrima,12</Font>
+              <GrowToHeight>True</GrowToHeight>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataTextBand5</Name>
+              <Page isRef="4"/>
+              <Parent isRef="43"/>
+              <Text>{DataSource1.Product_Price}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </DataTextBand5>
+          </Components>
+          <Conditions isList="true" count="0"/>
+          <DataSourceName>DataSource1</DataSourceName>
+          <Filters isList="true" count="0"/>
+          <Name>DataBand</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <Sort isList="true" count="0"/>
+        </DataBand>
+        <RectanglePrimitive3 isKey="true" Ref="49" type="RectanglePrimitive">
+          <ClientRectangle>11.6,10.7,7.4,5.1</ClientRectangle>
+          <Color>Black</Color>
+          <Conditions isList="true" count="0"/>
+          <Guid>cb6cbd37ea20e58348de1c6f09fc98e8</Guid>
+          <Name>RectanglePrimitive3</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+        </RectanglePrimitive3>
+        <StartPointPrimitive2 isKey="true" Ref="50" type="Stimulsoft.Report.Components.StiStartPointPrimitive">
+          <ClientRectangle>11.6,10.7,0,0</ClientRectangle>
+          <Conditions isList="true" count="0"/>
+          <Name>StartPointPrimitive2</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <ReferenceToGuid>cb6cbd37ea20e58348de1c6f09fc98e8</ReferenceToGuid>
+        </StartPointPrimitive2>
+        <EndPointPrimitive2 isKey="true" Ref="51" type="Stimulsoft.Report.Components.StiEndPointPrimitive">
+          <ClientRectangle>19,15.8,0,0</ClientRectangle>
+          <Conditions isList="true" count="0"/>
+          <Name>EndPointPrimitive2</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <ReferenceToGuid>cb6cbd37ea20e58348de1c6f09fc98e8</ReferenceToGuid>
+        </EndPointPrimitive2>
+        <RectanglePrimitive2 isKey="true" Ref="52" type="RectanglePrimitive">
+          <ClientRectangle>0.8,10.8,6.8,5.2</ClientRectangle>
+          <Color>Black</Color>
+          <Conditions isList="true" count="0"/>
+          <Guid>87461fb30777a8e7e1471c6fed5368a7</Guid>
+          <Name>RectanglePrimitive2</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+        </RectanglePrimitive2>
+        <StartPointPrimitive1 isKey="true" Ref="53" type="Stimulsoft.Report.Components.StiStartPointPrimitive">
+          <ClientRectangle>0.8,10.8,0,0</ClientRectangle>
+          <Conditions isList="true" count="0"/>
+          <Name>StartPointPrimitive1</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <ReferenceToGuid>87461fb30777a8e7e1471c6fed5368a7</ReferenceToGuid>
+        </StartPointPrimitive1>
+        <EndPointPrimitive1 isKey="true" Ref="54" type="Stimulsoft.Report.Components.StiEndPointPrimitive">
+          <ClientRectangle>7.6,16,0,0</ClientRectangle>
+          <Conditions isList="true" count="0"/>
+          <Name>EndPointPrimitive1</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <ReferenceToGuid>87461fb30777a8e7e1471c6fed5368a7</ReferenceToGuid>
+        </EndPointPrimitive1>
+        <RectanglePrimitive1 isKey="true" Ref="55" type="RectanglePrimitive">
+          <ClientRectangle>0.8,5.4,18.2,4.6</ClientRectangle>
+          <Color>Black</Color>
+          <Conditions isList="true" count="0"/>
+          <Guid>f8d6198e7c47a28d68651d762f20e7dc</Guid>
+          <Name>RectanglePrimitive1</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+        </RectanglePrimitive1>
+        <EndPointPrimitive3 isKey="true" Ref="56" type="Stimulsoft.Report.Components.StiEndPointPrimitive">
+          <ClientRectangle>19,10,0,0</ClientRectangle>
+          <Conditions isList="true" count="0"/>
+          <Name>EndPointPrimitive3</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+          <ReferenceToGuid>f8d6198e7c47a28d68651d762f20e7dc</ReferenceToGuid>
+        </EndPointPrimitive3>
+        <RectanglePrimitive4 isKey="true" Ref="57" type="RectanglePrimitive">
+          <ClientRectangle>0.8,3.4,18.2,1.6</ClientRectangle>
+          <Color>Black</Color>
+          <Conditions isList="true" count="0"/>
+          <Guid>9fabf01f62f8323276431d77a6e10d52</Guid>
+          <Name>RectanglePrimitive4</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+        </RectanglePrimitive4>
+        <RectanglePrimitive5 isKey="true" Ref="58" type="RectanglePrimitive">
+          <ClientRectangle>14.8,0.8,4,1.6</ClientRectangle>
+          <Color>Black</Color>
+          <Conditions isList="true" count="0"/>
+          <Guid>0343aebe1ebbac8b97a81d7bd2879b2d</Guid>
+          <Name>RectanglePrimitive5</Name>
+          <Page isRef="4"/>
+          <Parent isRef="4"/>
+        </RectanglePrimitive5>
+      </Components>
+      <Conditions isList="true" count="0"/>
+      <Guid>50cfe071c40572553baf138fd7e8ab70</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0"/>
+      <Watermark isKey="true" Ref="59" type="Stimulsoft.Report.Components.StiWatermark">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings isKey="true" Ref="60" type="Stimulsoft.Report.Print.StiPrinterSettings"/>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>01/08/2016 03:03:24 AM</ReportChanged>
+  <ReportCreated>01/06/2016 02:22:20 AM</ReportCreated>
+  <ReportFile>invoice2.pdf</ReportFile>
+  <ReportGuid>cee1f3d859bfbabf56541dd1a4ed1661</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2015.1</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+
+    public class Report : Stimulsoft.Report.StiReport
+
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0"/>
+</StiSerializer>

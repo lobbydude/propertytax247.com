@@ -1,0 +1,533 @@
+body {
+	background-image: url(../images/bg-easytitlesearch7.gif);
+	background-repeat: repeat-y;
+	background-position: top center;
+	margin: 0;
+	padding: 0;
+	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+body.long {
+	background-image: url(../images/bg-easytitlesearch7-long.gif);
+}
+
+.topbluerow  {
+	background-color:#426375;
+	color: #ffffff;
+	 
+}
+
+.navgreyrow  {
+	background-color:#333333;
+	background-image: url(../images/nav-bg2.gif);
+	background-repeat:repeat;
+	height: 40px;
+	text-align: center;
+}
+
+.navgreyrow a {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	font-size: 16px;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 10px;
+}
+.navgreyrow a:hover {
+	text-decoration: underline;
+	
+}
+
+h1 {
+	font-family: "Arial", Courier, monospace;
+	color: #1686c4;
+	font-weight: bold;
+	font-size: 26px;
+	text-transform: uppercase;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+h2 {
+	font-family: "Arial", Courier, monospace;
+	color: #1686c4;
+	font-weight: bold;
+	font-size: 19px;
+	text-transform: uppercase;
+	line-height: 0%;
+}
+.bigblack {
+	font-family: Tahoma, Arial, sans-serif;
+	color: #363636;
+	font-weight: bold;
+	font-size: 25px;
+}
+.bigblack2 {
+	font-family: Tahoma, Arial, sans-serif;
+	color: #363636;
+	font-weight: bold;
+	font-size: 22px;
+}
+.bigblack img {
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.midblack {
+	font-family: Tahoma, Arial, sans-serif;
+	color: #363636;
+	font-weight: bold;
+	font-size: 16px;
+}
+.header-big {
+	font-family: "Courier New", Courier, monospace;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 24px;
+}
+.header-links {
+	font-family: "Courier New", Courier, monospace;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 18px;
+}
+.small {
+	font-size: 14px;
+}
+.maintext {
+	font-size: 12px;
+	color: #333;
+}
+ 
+.verysmall {	font-size: 12px;
+}
+ul.niceList { margin-left:0em; padding-left:1.8em; padding-bottom:2em;  }
+ul.niceList li { background:url(../images/checkmark.gif) 0em 0.3em no-repeat;  padding-left: 2.8em; margin-bottom:2em; list-style: none; text-align: left;}
+.formtext {
+	font-family: Tahoma, Arial, sans-serif;
+	color: #363636;
+	line-height: 2em; 
+	font-size: 12px;
+	text-transform: uppercase;
+} 
+.frombigtext {
+	font-family: "Arial", Courier, monospace;
+	color: #1686c4;
+	font-weight: bold;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 20px 0 20px 0;
+}
+ .frombigtext3 {
+	font-family: "Arial", Courier, monospace;
+	color: #1686c4;
+	font-weight: bold;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 20px 0 20px 0;
+}
+ 
+.footerarea  {
+	background-color:#333333;
+	 color: #ffffff;
+	 font-size: 9px;
+}
+
+.footerarea a {
+	font-family: "Courier New", Courier, monospace;
+	 
+	font-size: 13px;
+	color: #ffffff;
+	text-decoration: none;
+	
+}
+.footerarea a:hover {
+	text-decoration: underline;
+	
+}
+.footerarea b {
+	font-family: "Courier New", Courier, monospace;
+	 font-weight: normal;
+	font-size: 12px;
+	color: #ffffff;
+	 
+	
+}
+.footerarea2  {
+	background-color:#333333;
+	 color: #ffffff;
+	 font-family: "Courier New", Courier, monospace;
+	font-size: 13px;
+	color: #ffffff;
+	text-align:center;
+	 
+	 
+}
+.footerarea2 a {
+
+	color: yellow;
+	text-decoration: underline;
+	 }
+
+
+.divider   {
+ 
+	background-image: url(../images/vertical_divider.gif);
+	background-repeat:repeat-y;
+}
+.divider2   {
+ 
+	background-image: url(../images/vertical_divider2.gif);
+	background-repeat:repeat-y;
+}
+.paddme
+{
+padding-left: 10px;
+}
+ 
+.pricingbgtable  {
+	 
+	background: url(../images/moneyhouse.jpg) no-repeat left top;
+font-size: 14px;
+line-height: 1.3em;
+} 
+.pricingpadding
+{
+padding-left: 170px;
+}
+.littleblack {
+	font-family: Tahoma, Arial, sans-serif;
+	color: #363636;
+	font-weight: bold;
+	font-size: 18px;
+	
+}
+.listee  {
+	 
+font-size: 13px;
+line-height: 1.9em;
+} 
+.greenfont  {
+	 
+	 color: #009900;
+	 text-decoration: underline;
+	  
+}
+.greenfontbuy  {
+	 
+	 color: #009900;
+	 
+	  
+}
+ .awesome, .awesome:visited {
+	background: #222 url(../images/alert-overlay.png) repeat-x; 
+	display: inline-block; 
+	padding: 5px 10px 6px; 
+	color: #fff; 
+	text-decoration: none;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+}
+
+.green.awesome, .green.awesome:visited {
+font-size: 14px;
+padding: 8px 14px 9px;
+background-color: #217153;
+}
+
+.green.awesome:hover {
+	background-color: #1b5a42;
+	}
+	
+.upgrade.awesome, .upgrade.awesome:visited		{ 
+font-size: 16px;
+margin-top: 15px;
+margin-right: 15px;
+padding: 12px 15px 19px 15px;
+background-color: #217153;
+text-align: center;
+line-height:170%
+}
+.upgrade.awesome:hover {
+background-color: #1b5a42; 
+}
+.upgrades.awesome, .upgrades.awesome:visited {
+font-size: 14px;
+margin-top: 0px;
+margin-right: 10px;
+padding: 12px 15px 19px 15px;
+background-color: #217153;
+text-align: center;
+line-height:120%
+}
+
+.upgrades.awesome:hover { 
+background-color: #1b5a42;
+}
+.style33 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.bluboldcounty {
+	font-family: "Arial", Courier, monospace;
+	color: #1686c4;
+	font-weight: bold;
+	font-size: 26px;
+	text-transform: uppercase;
+	 
+}
+.countiestext  {
+	 
+ 
+font-size: 14px;
+line-height: 1.3em;
+} 
+.countiestext  p {
+	 
+ 
+margin-top: 0px;
+} 
+
+.cmstext1  {
+	 
+ 
+font-size: 14px;
+line-height: 1.3em;
+} 
+.cmstext1  p {
+	 
+ 
+margin-top: 0px;
+} 
+.smalldivide   {
+ 
+	background-image: url(../images/smalldivide.gif);
+	background-repeat:repeat-y;
+}
+.countieswithlines {
+	font-size: 12px;
+	color: #333;
+	margin-top: 10px;
+	line-height: 3;
+}
+
+
+.counties {
+	font-size: 12px;
+	color: #333;
+	margin-top: 10px;
+}
+.counties a {
+	 
+	 
+	 
+	color: #333;
+	text-decoration: none;
+	
+}
+.counties a:hover {
+	text-decoration: underline;
+	
+}
+.reportinc {
+	font-family: Arial, sans-serif;
+	color: #363636;
+	size: 12px;
+	}
+.reportinc b {
+	font-size: 14px;
+	font-weight: bold;
+}
+.reportinc p {
+	margin: 5px;
+}
+
+.button {background-color: rgb(128,128,128); color:#ffffff; font-size: 8pt;} 
+.inputc {font-size: 8pt;} 
+.style3 {font-size: xx-small} 
+.Sbluboldcounty {
+	font-family: "Arial", Courier, monospace;
+	color: #1686c4;
+	font-weight: bold;
+	font-size: 22px;
+	text-transform: uppercase;
+	 
+}
+.samplenav {
+	font-size: 12px;
+ 
+	 
+	 color: #0033FF;
+}
+.samplenav a, .samplenav a:visited {
+	 
+    font-size: 12px;
+	font-weight: bold;
+	  color: #0033FF;
+	text-decoration: none;
+	
+}
+
+.samplenav a:hover {
+	text-decoration: underline;
+	
+}
+.sublogo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #ffffff;
+	font-size: 11px;
+	padding: 0px 0px 20px 0px;
+	 
+	letter-spacing: -.05em;
+	
+}
+.textareaaddress {
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	line-height: 2em;
+	width: 350px;
+	
+}
+.smaller11 {
+	font-family: "Arial", Courier, monospace;
+ 
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	padding: 0px;
+}
+
+.tiny1 {
+	font-family: "Arial", Courier, monospace;
+	font-weight: bold;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+	padding: 0px;
+}
+.tiny2 {
+	font-family: "Arial", Courier, monospace;
+	font-weight: bold;
+	font-size: 10px;
+	color: #278502;
+	text-decoration: none;
+	padding: 0px;
+}
+.creditblue1  {
+	background-color:#426375;
+	color: #ffffff;
+	font-size: 12px;
+	text-align: right; 
+	padding-right: 15px;
+}
+.creditblue1  b{
+	 
+	color: #339900;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+	background: #ffffff;
+	padding: 5px; 
+	 
+}
+.creditblue1  p{
+	 
+	 
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+	  
+	 
+}
+.creditblue1  a{
+	 
+	color: #F7FD00;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right; 
+	padding-top: 15px; 
+	text-decoration: none;
+	 
+}
+.creditblue1  a:hover{
+	 
+	color: #F7FD00;
+	
+	text-decoration: underline;
+	 
+}
+
+.error, .errors {
+	color: #FF0000;
+	font-size: 15px;
+}
+
+.thanks {
+	color: #0000FF;
+}
+
+
+.loginLink {
+	font-size: 13px;
+	 margin-bottom: 5px;
+	color: #ffffff;
+	text-decoration: none;
+	 
+}	
+	a.loginLink, a.loginLink:visited {
+	 
+	color: yellow;
+	text-decoration: underline;
+ 
+
+}
+ 
+
+a.loginLink:hover {
+	color: #FFF;
+}
+.disclaim   {
+	 
+ 
+	font-size: 10px;
+	 
+	text-align: left; 
+	padding: 15px; 
+	 
+	 
+}
+
+.yellowboxtable
+{
+border:1px solid black;
+background-color:#fdffc7;
+width: 820px;
+padding: 5px 10px 10px 10px;
+margin: 0px 0 10px 0;
+text-align:left;
+font-size: 13px;
+}
+.yellowboxtable b
+{
+font-style: bold;
+text-decoration: underline;
+}
+.yellowboxtablecheckout
+{
+width: 520px;
+padding: 5px 10px 10px 10px;
+border:1px solid black;
+background-color:#fdffc7; 
+text-align:left;
+font-size: 11px;
+}
+.yellowboxtablecheckout b
+{
+font-style: bold;
+text-decoration: underline;
+} 

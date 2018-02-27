@@ -1,0 +1,304 @@
+.node-buttons{
+    visibility: hidden;   
+}
+.gradeX:hover a{
+    visibility: visible; 
+}
+.fa.fa-trash-o,.glyphicon.glyphicon-trash {
+    color: #cb5a5e;
+    font-weight: bold;
+}
+.fa.fa-edit,.glyphicon.glyphicon-pencil {
+    color: #262626;
+    font-weight: bold;
+}
+.fa.fa-angle-left,.fa.fa-angle-right{
+    line-height: 18px;
+}
+.WpoiA.b-c {
+    border: 16px solid #00a63f;
+}
+.WpoiA {
+    background-color: #00a63f;
+    border-radius: 50%;
+    bottom: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    height: 50px;
+    margin-bottom: 54px;
+    margin-right: 24px;
+    position: fixed;
+    right: 0;
+    transform: translateZ(0px);
+    transition: all 0.218s ease 0s;
+    width: 50px;
+    z-index: 1000;
+    padding-left:0px;
+    padding-top: 2px;
+}
+.fa.fa-plus{
+    color:#fff;
+	padding:0px 0px 0px 3px;
+}
+.tab-content.scroller{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+    margin-top: -1px;
+    padding: 10px;
+}
+.tools > h4 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.validate-has-error + span.validate-has-error, .validate-has-error > span.validate-has-error, .input-group + .validate-has-error {
+    color: #cc2424;
+    display: inline-block;
+    margin-top: 5px;
+}
+.form-control.input-sm:focus{
+    /*position: absolute;*/
+    /*transition: all 0.2s ease 0s;
+    z-index: 5;
+    border-bottom:2px solid #31708f;*/
+	
+	font-size: 14px;
+    padding: 2px 0;	
+	border: 1.50px solid #002040; 
+	
+	color: #002040;
+	
+}
+.checkbox-list {
+    /*margin-left: 15px;*/
+    padding-top: 18px;
+    padding-left: 14px;
+}
+#tc-error,#refund_request_tc-error,#refund_response_tc-error {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #cc2424;
+    text-align: left;
+    width: 550px;
+}
+.validate-has-error{
+    color: #cc2424;
+    display: block;
+}
+.btn.btn-xs.black.node-buttons{
+    margin:0px;
+}
+.form-horizontal.popuptable{
+    padding: 15px;
+}
+.colorDefinition{
+    color:#cc2424;
+    font-weight: bold;
+}
+.cart-image {
+    background-image: url("../img/cart_tran.png");
+    height: 40px;
+    width: 80px;
+    margin-top: -10px;
+}
+/* mobile size image*/
+
+.cart-inside{
+    margin-left: 26px;
+	position:relative;
+	bottom:-10px;
+    background-color: #00a63f;
+    font-weight: bold;
+    color: #fff;
+}
+
+.dropdown-menu.arrow_box li {
+    list-style: outside none none;
+}
+#showcartdiv > ul{	
+    width:268px;
+    padding:12px;	
+	color:#fff;
+	background:#00a63f url('../../../assets/admin/layout4/img/slash-bg.png')repeat;
+	/*background-image: url(../../img/slash-bg.png.png)repeat; #528FCC*/	
+}
+.modify ul {
+    /*-moz-column-count: 5;
+    -moz-column-gap: 30px;*/
+    cursor: pointer;
+    list-style-type: none;
+    margin: 15px;
+    padding: 0;
+    text-decoration: underline;
+}
+.text-theme { color:#fff; font-weight:bold; font-size: 14px; }
+.btn.btn-theme.pull-right{
+    background-color: #00a63f;
+    box-shadow: 0 2px 0 0 #00a63f;
+    color: #ffffff !important;
+}
+
+/* Delete button*/
+.delete {
+	-moz-box-shadow: 0px 0px 2px 0px #333333;
+	-webkit-box-shadow: 0px 0px 2px 0px #333333;
+	box-shadow: 0px 0px 5px 0px #333333;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #333333), color-stop(1, #333333));
+	background:-moz-linear-gradient(top, #333333 5%, #333333 100%);
+	background:-webkit-linear-gradient(top, #333333 5%, #333333 100%);
+	background:-o-linear-gradient(top, #333333 5%, #333333 100%);
+	background:-ms-linear-gradient(top, #333333 5%, #333333 100%);
+	background:linear-gradient(to bottom, #333333 5%, #333333 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#333333',GradientType=0);
+	background-color:#00A63F;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:5px;	
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Raleway', sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	padding:5px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #333333;
+}
+.delete:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #00A63F), color-stop(1, #00A63F));
+	background:-moz-linear-gradient(top, #00A63F 5%, #00A63F 100%);
+	background:-webkit-linear-gradient(top, #00A63F 5%, #00A63F 100%);
+	background:-o-linear-gradient(top, #00A63F 5%, #00A63F 100%);
+	background:-ms-linear-gradient(top, #00A63F 5%, #333333 100%);
+	background:linear-gradient(to bottom, #00A63F 5%, #00A63F 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00A63F', endColorstr='#00A63F',GradientType=0);
+	background-color:#00A63F;
+	color:#ffffff;
+	text-decoration:none;
+}
+.delete:active {
+	position:relative;
+	top:1px;
+	color:#fff;
+}
+/* Top bar Style start here*/
+/* Topbar */
+#topbar {
+    width: 100%;
+    height: auto;
+    font-size: 13px;
+    color: #ffffff;
+    text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
+    /*background: #1f5c99 url("../images/assets/background1.jpg") no-repeat center 50%;	*/
+	/*background: #2D7CCB url("../assets/global/img/background1.jpg") no-repeat center 50%;*/
+	background-color:#00A63F;	
+}
+#topbar p { 
+    /*margin: 8px auto 8px 10px;*/
+    /*margin: 0px 0px 0px 0px;*/
+    font-weight: bold;
+    font-size: 24px;
+	margin:0px -82px;
+}
+#topbar p i { margin-right: 5px; font-size: 22px;}
+@media (max-width: 767px) {
+    #topbar p { margin: 5px auto -20px; }
+}
+/* Top bar Style End here*/
+/* signup page bold fond*/
+.report {
+    color: #00a63f;
+    font-size: 14px;
+    font-weight: bold;	
+}
+#plantotal_head > strong {
+    font-size: 15px;
+}
+#initials-error {
+     left:22px;
+    margin-bottom: -48px;
+    margin-top: -15px;
+    position: relative;
+}
+/* Export in Excel Button Css Start here*/
+#btnExport,#btnExport_payment,#btnExport1,#btnExport2,#btnExport3,#btnExport4,#btnExport5,#btnExport6,#btnExport7,#btnExport7,#btnExport8,#btnExport9,#btnExport10,#btnExport11,#btnExport12{  
+background: #00a63f;  
+background-image: -webkit-linear-gradient(top, #00a63f, #00a63f);  
+background-image: -moz-linear-gradient(top, #00a63f, #00a63f);  
+background-image: -ms-linear-gradient(top, #00a63f, #00a63f);  
+background-image: -o-linear-gradient(top, #00a63f, #00a63f);  
+background-image: linear-gradient(to bottom, #00a63f, #00a63f);  
+-webkit-border-radius: 10;  
+-moz-border-radius: 10;  
+border-radius: 10px;  
+font-family: "Raleway",sans-serif;  
+color: #ffffff;  
+font-size:15px;  
+padding: 6px 10px 6px 10px;  
+text-decoration: none;  
+border:none;  
+font-weight: 600;
+}
+#btnExport:hover,#btnExport_payment:hover,#btnExport1:hover,#btnExport2:hover,#btnExport3:hover,#btnExport4:hover,#btnExport5:hover,#btnExport6:hover,#btnExport7:hover,#btnExport8:hover,#btnExport9:hover,#btnExport10:hover,#btnExport11:hover,#btnExport12:hover{   
+background: #00a63f;  
+background-image: -webkit-linear-gradient(top, #00a63f, #00a63f);  
+background-image: -moz-linear-gradient(top, #00a63f, #00a63f);  
+background-image: -ms-linear-gradient(top, #00a63f, #00a63f);  
+background-image: -o-linear-gradient(top, #00a63f, #00a63f);  
+background-image: linear-gradient(to bottom, #00a63f, #00a63f);  
+text-decoration: none;
+}
+/* Client Popup Dashboard Excel Button Css Start here*/
+#btnExport_Processing1,#btnExport_Pending,#btnExport_Completed,#btnExport_Hold,#btnExport_Cancel{  
+background: #333;  
+background-image: -webkit-linear-gradient(top, #333, #333);  
+background-image: -moz-linear-gradient(top, #333, #333);  
+background-image: -ms-linear-gradient(top, #333, #333);  
+background-image: -o-linear-gradient(top, #333, #333);  
+background-image: linear-gradient(to bottom, #333, #333);  
+-webkit-border-radius: 10;  
+-moz-border-radius: 10;  
+border-radius: 10px;  
+font-family: "Raleway",sans-serif;  
+color: #ffffff;  
+font-size:15px;  
+padding: 6px 10px 6px 10px;  
+text-decoration: none;  
+border:none;  
+font-weight: 600;
+}
+#btnExport_Processing1:hover,#btnExport_Pending:hover,#btnExport_Completed:hover,#btnExport_Hold:hover,#btnExport_Cancel:hover {  
+background: #002040;  
+background-image: -webkit-linear-gradient(top, #002040, #002040);  
+background-image: -moz-linear-gradient(top, #002040, #002040);  
+background-image: -ms-linear-gradient(top, #002040, #002040);  
+background-image: -o-linear-gradient(top, #002040, #002040);  
+background-image: linear-gradient(to bottom, #002040, #002040);  
+text-decoration: none;
+}
+/* Admin Popup Dashboard Excel Button Css Start here*/
+#btnExport_Admin_Processing,#btnExport_Admin_Pending,#btnExport_Admin_Completed,#btnExport_Admin_Hold,#btnExport_Admin_Cancel,#btnExport_Admin_Client{  
+background: #00a63f;  
+background-image: -webkit-linear-gradient(top, #00a63f, #00a63f);  
+background-image: -moz-linear-gradient(top, #00a63f, #00a63f);  
+background-image: -ms-linear-gradient(top, #00a63f, #00a63f);  
+background-image: -o-linear-gradient(top, #00a63f, #00a63f);  
+background-image: linear-gradient(to bottom, #00a63f, #00a63f);  
+-webkit-border-radius: 10;  
+-moz-border-radius: 10;  
+border-radius: 10px;  
+font-family: "Raleway",sans-serif;  
+color: #ffffff;  
+font-size:15px;  
+padding: 6px 10px 6px 10px;  
+text-decoration: none;  
+border:none;  
+font-weight: 600;
+}
+#btnExport_Admin_Processing:hover,#btnExport_Admin_Pending:hover,#btnExport_Admin_Completed:hover,#btnExport_Admin_Hold:hover,#btnExport_Admin_Cancel:hover,#btnExport_Admin_Client:hover {  
+background: #002040;  
+background-image: -webkit-linear-gradient(top, #002040, #002040);  
+background-image: -moz-linear-gradient(top, #002040, #002040);  
+background-image: -ms-linear-gradient(top, #002040, #002040);  
+background-image: -o-linear-gradient(top, #002040, #002040);  
+background-image: linear-gradient(to bottom, #002040, #002040);  
+text-decoration: none;
+}

@@ -1,0 +1,24 @@
+<?php
+$S_Id = $_POST['state_id'];
+$q_countywise = "select * from tbl_countywise where Status=1 AND Statewise_Id=$S_Id";
+$result_countywise = mysql_query($q_countywise);
+$count_countywise = mysql_num_rows($result_countywise);
+?>
+<select style="margin-left:-40px;" class="form-control select2me option3" name="add_county" id="add_county" autocomplete="off" style="text-align:center;" onchange="change_price($('#add_plan').val())" required>
+    <?php
+    if ($count_countywise > 0) {
+        echo "<option value=''> -- Select County -- </option>";
+        while ($row_countywise = mysql_fetch_array($result_countywise)) {
+            $County_Id = $row_countywise['County_Id'];
+            $q_county = "select * from tbl_county where County_ID=$County_Id";
+            $result_county = mysql_query($q_county);
+            while ($row_county = mysql_fetch_array($result_county)) {
+                $County = $row_county['County'];
+                ?>
+                <option value="<?php echo $County_Id; ?>"><?php echo $County; ?></option>
+                <?php
+            }
+        }
+    }
+    ?>
+</select>
